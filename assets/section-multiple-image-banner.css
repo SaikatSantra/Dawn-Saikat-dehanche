@@ -39,20 +39,24 @@
   top: 0;
   width: 100%;
 }
-
+.banner__media.media.banner__media-1 {
+    width: 100%;
+    display: block;
+}
 .banner__media.media.banner__media-3 {
     width: 33.33333%;
     display: block;
 }
-.banner__media-3 + .banner__media-3{
-left:calc(100% / 3 );
+.banner__media.media.banner__media-2 {
+    width: 50%;
+    display: block;
 }
-.banner__media-3 + .banner__media-3 + .banner__media-3{
-left:calc(100% / 3 * 2);
+.banner__media.media.banner__media-4 {
+    width: 25%;
+    display: block;
 }
-.banner__media-3 + .banner__media-3 + .banner__media-3  + .banner__media-3{
-left:calc(100% / 3 * 3);
-}
+
+
 
 @media screen and (max-width: 749px) {
   .banner--stacked .banner__media-half {
