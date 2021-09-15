@@ -47,6 +47,17 @@
 {%- endstyle -%}
 
 
+<style>
+  {% if imgCount == 3 %}
+  .banner__media-3 + .banner__media-3{
+    left:calc(100% / 3 );
+  }
+  .banner__media-3 + .banner__media-3 + .banner__media-3{
+    left:calc(100% / 3 * 2);
+  }
+  {% endif %}
+  
+</style>
 
 
 
