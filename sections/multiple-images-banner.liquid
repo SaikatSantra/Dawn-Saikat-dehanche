@@ -32,11 +32,14 @@
 {% assign imgCount = 0 %}
 {% if section.settings.image != blank %}
 {% assign imgCount = imgCount | plus: 1 %}
-{% elsif section.settings.image_2 != blank %}
+{% endif %}
+{% if section.settings.image_2 != blank %}
 {% assign imgCount = imgCount | plus: 1 %}
-{% elsif section.settings.image_3 != blank %}
+{% endif %}
+{% if section.settings.image_3 != blank %}
 {% assign imgCount = imgCount | plus: 1 %}
-{% elsif section.settings.image_4 != blank %}
+{% endif %}
+{% if section.settings.image_4 != blank %}
 {% assign imgCount = imgCount | plus: 1 %}
 {% endif %}
 
