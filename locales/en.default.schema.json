@@ -817,6 +817,12 @@
         "image_2": {
           "label": "Second image"
         },
+        "image_3": {
+          "label": "Third image"
+        },
+        "image_4": {
+          "label": "Fourth image"
+        },
         "desktop_text_box_position": {
           "options__1": {
             "label": "Top"
