@@ -74,6 +74,8 @@
 
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+  
+  <div class="img_wrap">
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %} banner__media-{{imgCount}}">
       <img
@@ -160,6 +162,8 @@
        class="banner__media-image-{{imgCount}}">
     </div>
   {%- endif -%}
+  </div>
+  
   
   <div class="banner__content banner__content--{{ section.settings.desktop_text_box_position }} page-width">
     <div class="banner__box color-{{ section.settings.color_scheme }}">
