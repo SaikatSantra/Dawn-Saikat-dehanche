@@ -37,7 +37,7 @@
         "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
         "image_2": "shopify:\/\/shop_images\/woman-model-business-suit-wearing-hat.jpg",
         "image_3": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "desktop_text_box_position": "center",
         "show_text_box": false,
         "image_overlay_opacity": 0,
