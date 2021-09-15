@@ -1,5 +1,22 @@
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
+
+{% assign imgCount = 0 %}
+{% if section.settings.image != blank %}
+{% assign imgCount = imgCount | plus: 1 %}
+{% endif %}
+{% if section.settings.image_2 != blank %}
+{% assign imgCount = imgCount | plus: 1 %}
+{% endif %}
+{% if section.settings.image_3 != blank %}
+{% assign imgCount = imgCount | plus: 1 %}
+{% endif %}
+{% if section.settings.image_4 != blank %}
+{% assign imgCount = imgCount | plus: 1 %}
+{% endif %}
+
+{{imgCount}}
+
 {%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
   {%- style -%}
   @media screen and (max-width: 749px) {
@@ -19,6 +36,12 @@
       content: '';
       display: block;
     }
+
+
+   .banner__media-{{imgCount}}{
+	left:calc(100% / {{imgCount}} )
+	}
+
   }
   {%- endstyle -%}
 {%- endif -%}
@@ -29,21 +52,9 @@
   }
 {%- endstyle -%}
 
-{% assign imgCount = 0 %}
-{% if section.settings.image != blank %}
-{% assign imgCount = imgCount | plus: 1 %}
-{% endif %}
-{% if section.settings.image_2 != blank %}
-{% assign imgCount = imgCount | plus: 1 %}
-{% endif %}
-{% if section.settings.image_3 != blank %}
-{% assign imgCount = imgCount | plus: 1 %}
-{% endif %}
-{% if section.settings.image_4 != blank %}
-{% assign imgCount = imgCount | plus: 1 %}
-{% endif %}
 
-{{imgCount}}
+
+
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   {%- if section.settings.image != blank -%}
