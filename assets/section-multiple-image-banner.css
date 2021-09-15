@@ -44,19 +44,14 @@
     width: 33.33333%;
     display: block;
 }
-
-.banner__media-half {
-  width: 50%;
-}
 .banner__media-3 + .banner__media-3{
 left:calc(100% / 3 );
 }
 .banner__media-3 + .banner__media-3 + .banner__media-3{
 left:calc(100% / 3 * 2);
 }
-.banner__media-half + .banner__media-half {
-  right: 0;
-  left: auto;
+.banner__media-3 + .banner__media-3 + .banner__media-3  + .banner__media-3{
+left:calc(100% / 3 * 3);
 }
 
 @media screen and (max-width: 749px) {
