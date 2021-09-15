@@ -59,15 +59,7 @@
 
 
 @media screen and (max-width: 749px) {
-  .banner--stacked .banner__media-half {
-    width: 100%;
-  }
-
-  .banner--stacked .banner__media-half + .banner__media-half {
-    order: 1;
-  }
-
-  .banner:not(.banner--adapt):not(.banner--stacked):not(.banner--mobile-bottom) > .banner__content {
+ .banner:not(.banner--adapt):not(.banner--stacked):not(.banner--mobile-bottom) > .banner__content {
     min-height: 39rem;
   }
 }
