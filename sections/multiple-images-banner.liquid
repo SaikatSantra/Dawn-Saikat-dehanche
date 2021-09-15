@@ -59,6 +59,16 @@
   .banner__media-2 + .banner__media-2{
     left:calc(100% / 2 );
   }
+  {% elsif imgCount == 4 %}
+  .banner__media-4 + .banner__media-4{
+    left:calc(100% / 4 );
+  }
+  .banner__media-4 + .banner__media-4 + .banner__media-4{
+    left:calc(100% / 4 * 3);
+  }
+  .banner__media-4 + .banner__media-4 + .banner__media-4 + .banner__media-4{
+    left:calc(100% / 4 * 4);
+  }
   {% endif %}
   
 </style>
