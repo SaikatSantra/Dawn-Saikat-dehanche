@@ -29,7 +29,9 @@
 
     {% render 'meta-tags' %}
     
+    {% if settings.show_slider %}
  <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -107,7 +109,9 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+     {% if settings.show_slider %}
 {{ 'vendor.css' | asset_url | stylesheet_tag }}
+    {% endif %}
     
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
