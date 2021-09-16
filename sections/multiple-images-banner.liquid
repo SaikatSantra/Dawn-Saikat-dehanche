@@ -15,7 +15,7 @@
 {% assign imgCount = imgCount | plus: 1 %}
 {% endif %}
 
-{%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
+{%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
   {%- style -%}
   @media screen and (max-width: 749px) {
     #Banner-{{ section.id }}::before,
