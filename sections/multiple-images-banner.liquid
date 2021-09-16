@@ -14,10 +14,10 @@
 {% assign imgCount = imgCount | plus: 1 %}
 {% endif %}
 
-{% if imgCount > 2 and section.settings.show_slider %}
+{% if imgCount > 2 and section.settings.show_slider %}{% endif %}
 <script src="{{ 'vendor.js' | asset_url }}"></script>
 {{ 'vendor.css' | asset_url | stylesheet_tag }}
-{% endif %}
+
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
 
