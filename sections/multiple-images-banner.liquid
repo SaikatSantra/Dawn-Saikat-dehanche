@@ -76,7 +76,7 @@
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   
-  <div class="img_wrap carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "prevNextButtons": false, "pageDots": false, "wrapAround": true, "groupCells": 2, "watchCSS": true }'>
+  <div class="img_wrap carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true, "groupCells": 2, "watchCSS": true }'>
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if imgCount == 0 %} placeholder{% endif %} banner__media-{{imgCount}}">
       <img
