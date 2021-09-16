@@ -81,7 +81,7 @@
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   
-  <div class="{% if imgCount > 2 and settings.show_slider %}carousel{% else %} img_wrap {% endif %}" {% if imgCount > 2 %} data-flickity='{ "adaptiveHeight": true, "cellAlign": "left", "contain": true, "draggable": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true, "watchCSS": true }' {% endif %}>
+  <div class="{% if imgCount > 2 and section.settings.show_slider %}carousel{% else %} img_wrap {% endif %}" {% if imgCount > 2 %} data-flickity='{ "adaptiveHeight": true, "cellAlign": "left", "contain": true, "draggable": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true, "watchCSS": true }' {% endif %}>
  
     {% if imgCount > 0 %}
 
@@ -316,6 +316,12 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_slider",
+      "default": true,
+      "label": "t:sections.image-banner.settings.show_slider.label"
     }
   ],
   "blocks": [
