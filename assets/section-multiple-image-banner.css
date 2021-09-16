@@ -303,4 +303,6 @@
       }
     }
     
-  
+  .media>img {
+    object-fit: contain;
+  }
