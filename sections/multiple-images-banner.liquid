@@ -46,8 +46,8 @@
  
 {%- endif -%}
 #Banner-{{ section.id }} .flickity-viewport, .carousel {
-{% comment %} height:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 | times: 2 }}px!important;{% endcomment %}
-height:334px!important;
+ height:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 | times: 2 }}px!important;
+{% comment %}height:334px!important;{% endcomment %}
 }
 {%- endstyle -%}
 
