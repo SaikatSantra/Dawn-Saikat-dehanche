@@ -34,9 +34,9 @@
         "1631719814361caad5-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/woman-model-business-suit-wearing-hat.jpg",
-        "image_4": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
-        "adapt_height_first_image": false,
+        "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
+        "image_2": "shopify:\/\/shop_images\/woman-model-business-suit-wearing-hat.jpg",
+        "adapt_height_first_image": true,
         "desktop_text_box_position": "center",
         "show_text_box": false,
         "image_overlay_opacity": 0,
@@ -60,59 +60,12 @@
         "color_scheme": "background-1",
         "stack_images_on_mobile": true,
         "show_text_below": true,
-        "show_slider": true
-      }
-    },
-    "163177673766f6df24": {
-      "type": "multiple-images-banner",
-      "blocks": {
-        "163177673766f6df24-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "medium"
-          }
-        },
-        "163177673766f6df24-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
-          }
-        },
-        "163177673766f6df24-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "163177673766f6df24-0",
-        "163177673766f6df24-1",
-        "163177673766f6df24-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/woman-model-business-suit-wearing-hat.jpg",
-        "image_2": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-        "adapt_height_first_image": false,
-        "desktop_text_box_position": "center",
-        "show_text_box": true,
-        "image_overlay_opacity": 0,
-        "color_scheme": "background-1",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "show_slider": true
+        "show_slider": false
       }
     }
   },
   "order": [
     "1631719814361caad5",
-    "1631776596769e8f08",
-    "163177673766f6df24"
+    "1631776596769e8f08"
   ]
 }
