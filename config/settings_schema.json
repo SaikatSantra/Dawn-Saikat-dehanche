@@ -4,8 +4,23 @@
     "theme_name": "Dawn",
     "theme_version": "2.1.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes/os20/themes-by-shopify/dawn",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes\/os20\/themes-by-shopify\/dawn",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
+  },
+  {
+    "name": "t:settings_schema.All_Slider.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.All_Slider.settings.header__1.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_slider",
+        "default": true,
+        "label": "t:sections.image-banner.settings.show_slider.label"
+      }
+    ]
   },
   {
     "name": "t:settings_schema.colors.name",
