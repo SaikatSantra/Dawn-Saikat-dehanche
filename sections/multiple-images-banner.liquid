@@ -14,16 +14,7 @@
 {% if section.settings.image_4 != blank %}
 {% assign imgCount = imgCount | plus: 1 %}
 {% endif %}
-{{section.settings.image.aspect_ratio}}</br>
 
-{{1 | divided_by: section.settings.image.aspect_ratio}}</br>
-
-{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio  | times: 100 }}</br>
-{% assign width= section.settings.image.width  %}
-{% assign height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
-
-width : {{ width }}
-height : {{ height }}
 
 
 {%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
@@ -87,14 +78,6 @@ height : {{ height }}
   }
 </style>
 
-<script type="text/javascript">
-
-document.addEventListener('DOMContentLoaded', function() {
-    var image = document.getElementById("f_img");
-    alert(`${image.width} x ${image.height}`);
-}, false);
-  
-</script>
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   
