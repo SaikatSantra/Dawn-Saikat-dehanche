@@ -51,7 +51,6 @@
       "type": "multiple-images-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/3577232.jpg",
-        "image_2": "shopify:\/\/shop_images\/3577232.jpg",
         "image_3": "shopify:\/\/shop_images\/3577232.jpg",
         "adapt_height_first_image": true,
         "desktop_text_box_position": "center",
