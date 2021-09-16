@@ -1,4 +1,3 @@
-{{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
 
 {% assign imgCount = 0 %}
@@ -19,6 +18,7 @@
 <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
 {{ 'vendor.css' | asset_url | stylesheet_tag }}
 {% endif %}
+{{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
 
 {%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
