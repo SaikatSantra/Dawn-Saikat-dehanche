@@ -67,9 +67,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
   } */
-  .banner__media.media{
-    width:50%!imoprtant;
-  }
+  
 }
 
 @media screen and (min-width: 750px) {
@@ -120,6 +118,7 @@
     .banner--stacked:not(.banner--adapt) .banner__media {
       position: relative;
       height: 39rem;
+      width:50%;
     }
 
     .banner::before {
