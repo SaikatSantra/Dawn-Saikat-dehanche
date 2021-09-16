@@ -1,7 +1,5 @@
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
-     <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
-{{ 'vendor.css' | asset_url | stylesheet_tag }}
 
 {% assign imgCount = 0 %}
 {% if section.settings.image != blank %}
@@ -17,6 +15,10 @@
 {% assign imgCount = imgCount | plus: 1 %}
 {% endif %}
 
+{% if imgCount > 2 and section.settings.show_slider %}
+<script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+{{ 'vendor.css' | asset_url | stylesheet_tag }}
+{% endif %}
 
 
 {%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
