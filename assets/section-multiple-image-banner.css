@@ -302,3 +302,7 @@
         content: '';
       }
     }
+    
+    .media>img {
+    object-fit: contain;
+    }
