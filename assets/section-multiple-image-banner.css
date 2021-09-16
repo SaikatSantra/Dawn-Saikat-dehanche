@@ -118,7 +118,7 @@
     }
     
     .banner__media:not(.banner__media-1) {
-        width:50%!important;
+        width:100%!important;
     }
 
     .banner::before {
