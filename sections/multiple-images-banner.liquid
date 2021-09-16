@@ -22,7 +22,7 @@
 {% assign width= section.settings.image.width  %}
 {% assign height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
 
-width : {{ section.settings.image.height }}
+width : {{ section.settings.image.height | divided_by: section.settings.image.aspect_ratio }}
 height : {{ height | divided_by: width | times: 300 }}
 
 
