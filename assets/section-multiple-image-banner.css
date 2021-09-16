@@ -118,7 +118,11 @@
     .banner--stacked:not(.banner--adapt) .banner__media {
       position: relative;
       height: 39rem;
-      width:50%;
+    
+    }
+    
+    .banner__media:not(.banner__media-1) {
+        width:50%;
     }
 
     .banner::before {
