@@ -286,3 +286,17 @@
 .banner__heading {
   margin-bottom: 0;
 }
+
+  
+  /* enable Flickity by default */
+  .carousel:after {
+    content: 'flickity';
+    display: none; /* hide :after */
+  }
+
+  @media screen and ( min-width: 768px ) {
+    /* disable Flickity for large devices */
+    .carousel:after {
+      content: '';
+    }
+  }
