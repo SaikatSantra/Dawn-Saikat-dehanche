@@ -49,6 +49,7 @@
     },
     "1631776596769e8f08": {
       "type": "multiple-images-banner",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/3577232.jpg",
         "image_3": "shopify:\/\/shop_images\/3577232.jpg",
