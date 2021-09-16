@@ -25,13 +25,12 @@
     content: '';
     display: block;
     }
-    
-.flickity-slider .banner__media {
+    .flickity-viewport, .carousel {
+    height:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}px!important;
+    }
+
+.flickity-slider .banner__media, .flickity-slider {
 position:relative!important;
-    flex-direction: unset!important;
-}
-.flickity-slider{
-<!-- position:relative!important; -->
 }
     }
 
