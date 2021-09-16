@@ -1,5 +1,7 @@
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
+     <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+{{ 'vendor.css' | asset_url | stylesheet_tag }}
 
 {% assign imgCount = 0 %}
 {% if section.settings.image != blank %}
