@@ -1,10 +1,10 @@
 {
   "settings_schema": {
     "All_Slider": {
-      "name": "All Slider",
+      "name": "All Sliders",
       "settings": {
         "header__1": {
-          "content": "Colores primarios"
+          "content": "Banner slider in Mobile"
         }
       }
     },
