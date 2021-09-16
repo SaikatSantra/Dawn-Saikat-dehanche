@@ -62,11 +62,11 @@
   .banner:not(.banner--adapt):not(.banner--stacked):not(.banner--mobile-bottom) > .banner__content {
     min-height: 39rem;
   }
-/*   .img_wrap{
+  .img_wrap{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  } */
+  }
   
 }
 
