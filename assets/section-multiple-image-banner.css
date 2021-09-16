@@ -306,3 +306,9 @@
     .media>img {
     object-fit: contain;
     }
+    
+    @media screen and (min-width: 750px){
+.banner {
+    min-height: 28rem;
+}
+  }
