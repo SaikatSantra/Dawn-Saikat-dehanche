@@ -1,13 +1,5 @@
 {
   "settings_schema": {
-    "All_Slider": {
-      "name": "All Slider",
-      "settings": {
-        "header__1": {
-          "content": "Colores primarios"
-        }
-      }
-    },
     "colors": {
       "name": "Colores",
       "settings": {
