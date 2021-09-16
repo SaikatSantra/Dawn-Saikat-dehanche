@@ -14,9 +14,9 @@
 {% if section.settings.image_4 != blank %}
 {% assign imgCount = imgCount | plus: 1 %}
 {% endif %}
-{{section.settings.image.aspect_ratio}}
+{{section.settings.image.aspect_ratio}}</br>
 
-{{1 | divided_by: section.settings.image.aspect_ratio}}
+{{1 | divided_by: section.settings.image.aspect_ratio}}</br>
 {%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
