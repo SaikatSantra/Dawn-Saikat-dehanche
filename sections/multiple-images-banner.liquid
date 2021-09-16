@@ -15,7 +15,7 @@
 {% endif %}
 
 {% if imgCount > 2 and section.settings.show_slider %}
-<script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'vendor.js' | asset_url }}"></script>
 {{ 'vendor.css' | asset_url | stylesheet_tag }}
 {% endif %}
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
