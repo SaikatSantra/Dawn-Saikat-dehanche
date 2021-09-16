@@ -89,11 +89,11 @@ height : {{ height }}
 
 <script type="text/javascript">
 
-   let image = document.getElementById('f_img');
-       
-        console.log('<h1>height of image is :'+ image.clientHeight + 'px </h1>');
-        
-
+document.addEventListener('DOMContentLoaded', function() {
+    var image = document.getElementById("f_img");
+    alert(`${image.width} x ${image.height}`);
+}, false);
+  
 </script>
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
