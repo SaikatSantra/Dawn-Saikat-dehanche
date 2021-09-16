@@ -87,7 +87,13 @@ height : {{ height }}
   }
 </style>
 
-
+<script type="text/javascript">
+function javascript_get_width_height()
+{
+    var img = document.getElementById('f_img');
+    alert("JavaSript -- " + "imgWidth: " + img.width + " - imgHeight: " + img.height);
+}
+</script>
 
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   
@@ -112,7 +118,7 @@ height : {{ height }}
            alt="{{ section.settings.image.alt | escape }}"
            width="{{ section.settings.image.width }}"
            height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
-           class="banner__media-image-{{imgCount}}">
+           class="banner__media-image-{{imgCount}}" id="f_img">
     </div>
     {%- endif -%}
     {%- if section.settings.image_2 != blank -%}
