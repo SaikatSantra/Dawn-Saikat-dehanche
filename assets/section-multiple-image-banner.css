@@ -76,8 +76,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 749px) {
   .banner--mobile-bottom .banner__media,
   .banner--stacked:not(.banner--mobile-bottom) .banner__media {
@@ -130,11 +128,6 @@
     .banner--stacked .banner__media-image-half {
       width: 100%;
     }
-    
-    .banner--adapt {
-      height: 39rem!important;
-    }
-    
   }
 
   .banner__media .placeholder-svg {
