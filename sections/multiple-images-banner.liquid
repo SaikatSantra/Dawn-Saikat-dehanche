@@ -22,8 +22,8 @@
 {% assign width= section.settings.image.width  %}
 {% assign height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
 
-width : {{ width |  divided_by: 300}}
-height : {{ height | divided_by: 300 }}
+width : {{ width |  divided_by: 500}}
+height : {{ height | divided_by: 500 }}
 
 
 {%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
