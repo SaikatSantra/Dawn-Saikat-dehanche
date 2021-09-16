@@ -18,7 +18,7 @@
 
 {{1 | divided_by: section.settings.image.aspect_ratio}}</br>
 
-{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}</br>
+{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio  | times: 100 }}</br>
 
 
 {%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
