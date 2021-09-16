@@ -87,7 +87,7 @@
   }
 
   .banner--stacked.banner--adapt .banner__content {
-    height: auto;
+    height: 39rem;
   }
 
   .banner:not(.banner--mobile-bottom) .banner__box {
