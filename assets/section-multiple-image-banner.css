@@ -76,9 +76,7 @@
   }
 }
 
-.banner--adapt {
-  height: auto;
-}
+
 
 @media screen and (max-width: 749px) {
   .banner--mobile-bottom .banner__media,
@@ -87,7 +85,7 @@
   }
 
   .banner--stacked.banner--adapt .banner__content {
-    height: 39rem;
+    height: auto;
   }
 
   .banner:not(.banner--mobile-bottom) .banner__box {
