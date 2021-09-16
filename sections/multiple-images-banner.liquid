@@ -77,92 +77,98 @@
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   
   <div class="img_wrap carousel" data-flickity='{ "cellAlign": "left", "contain": true, "draggable": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true, "watchCSS": true }'>
-  {%- if section.settings.image != blank -%}
+ 
+    {% if imgCount > 0 %}
+
+    {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if imgCount == 0 %} placeholder{% endif %} banner__media-{{imgCount}}">
       <img
-        srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | img_url: '375x' }} 375w,{%- endif -%}
-          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
-          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
-          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
-          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
-          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | img_url: '3000x' }} 3000w,{%- endif -%}
-          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | img_url: '3840x' }} 3840w,{%- endif -%}"
-        sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
-        src="{{ section.settings.image | img_url: '1500x' }}"
-        loading="lazy"
-        alt="{{ section.settings.image.alt | escape }}"
-        width="{{ section.settings.image.width }}"
-        height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
-        class="banner__media-image-{{imgCount}}">
+           srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+                   {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+                   {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+                   {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+                   {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+                   {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+                   {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | img_url: '3000x' }} 3000w,{%- endif -%}
+                   {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | img_url: '3840x' }} 3840w,{%- endif -%}"
+           sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+           src="{{ section.settings.image | img_url: '1500x' }}"
+           loading="lazy"
+           alt="{{ section.settings.image.alt | escape }}"
+           width="{{ section.settings.image.width }}"
+           height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+           class="banner__media-image-{{imgCount}}">
     </div>
-  {%- elsif section.settings.image_2 == blank -%}
+    {%- endif -%}
+    {%- if section.settings.image_2 != blank -%}
+    <div class="banner__media media banner__media-{{imgCount}}">
+      <img
+           srcset="{%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | img_url: '375x' }} 375w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 750 -%}{{ section.settings.image_2 | img_url: '750x' }} 750w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 1100 -%}{{ section.settings.image_2 | img_url: '1100x' }} 1100w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 1500 -%}{{ section.settings.image_2 | img_url: '1500x' }} 1500w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 1780 -%}{{ section.settings.image_2 | img_url: '1780x' }} 1780w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 2000 -%}{{ section.settings.image_2 | img_url: '2000x' }} 2000w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 3000 -%}{{ section.settings.image_2 | img_url: '3000x' }} 3000w,{%- endif -%}
+                   {%- if section.settings.image_2.width >= 3840 -%}{{ section.settings.image_2 | img_url: '3840x' }} 3840w,{%- endif -%}"
+           sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
+           src="{{ section.settings.image_2 | img_url: '1500x' }}"
+           loading="lazy"
+           alt="{{ section.settings.image_2.alt | escape }}"
+           width="{{ section.settings.image_2.width }}"
+           height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio }}"
+           class="banner__media-image-{{imgCount}}">
+    </div>
+    {%- endif -%}
+
+    {%- if section.settings.image_3 != blank -%}
+    <div class="banner__media media banner__media-{{imgCount}}">
+      <img
+           srcset="{%- if section.settings.image_3.width >= 375 -%}{{ section.settings.image_3 | img_url: '375x' }} 375w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 750 -%}{{ section.settings.image_3 | img_url: '750x' }} 750w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 1100 -%}{{ section.settings.image_3 | img_url: '1100x' }} 1100w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 1500 -%}{{ section.settings.image_3 | img_url: '1500x' }} 1500w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 1780 -%}{{ section.settings.image_3 | img_url: '1780x' }} 1780w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 2000 -%}{{ section.settings.image_3 | img_url: '2000x' }} 2000w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 3000 -%}{{ section.settings.image_3 | img_url: '3000x' }} 3000w,{%- endif -%}
+                   {%- if section.settings.image_3.width >= 3840 -%}{{ section.settings.image_3 | img_url: '3840x' }} 3840w,{%- endif -%}"
+           sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
+           src="{{ section.settings.image_3 | img_url: '1500x' }}"
+           loading="lazy"
+           alt="{{ section.settings.image_3.alt | escape }}"
+           width="{{ section.settings.image_3.width }}"
+           height="{{ section.settings.image_3.width | divided_by: section.settings.image_3.aspect_ratio }}"
+           class="banner__media-image-{{imgCount}}">
+    </div>
+    {%- endif -%}
+
+    {%- if section.settings.image_4 != blank -%}
+    <div class="banner__media media banner__media-{{imgCount}}">
+      <img
+           srcset="{%- if section.settings.image_4.width >= 375 -%}{{ section.settings.image_4 | img_url: '375x' }} 375w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 750 -%}{{ section.settings.image_4 | img_url: '750x' }} 750w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 1100 -%}{{ section.settings.image_4 | img_url: '1100x' }} 1100w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 1500 -%}{{ section.settings.image_4 | img_url: '1500x' }} 1500w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 1780 -%}{{ section.settings.image_4 | img_url: '1780x' }} 1780w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 2000 -%}{{ section.settings.image_4 | img_url: '2000x' }} 2000w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 3000 -%}{{ section.settings.image_4 | img_url: '3000x' }} 3000w,{%- endif -%}
+                   {%- if section.settings.image_4.width >= 3840 -%}{{ section.settings.image_4 | img_url: '3840x' }} 3840w,{%- endif -%}"
+           sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
+           src="{{ section.settings.image_4 | img_url: '1500x' }}"
+           loading="lazy"
+           alt="{{ section.settings.image_4.alt | escape }}"
+           width="{{ section.settings.image_4.width }}"
+           height="{{ section.settings.image_4.width | divided_by: section.settings.image_4.aspect_ratio }}"
+           class="banner__media-image-{{imgCount}}">
+    </div>
+    {%- endif -%}
+
+    {%- else -%}
     <div class="banner__media media{% if imgCount == 0 %} placeholder{% endif %} banner__media-{{imgCount}}">
       {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
-  {%- endif -%}
-  {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media banner__media-{{imgCount}}">
-      <img
-        srcset="{%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | img_url: '375x' }} 375w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 750 -%}{{ section.settings.image_2 | img_url: '750x' }} 750w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 1100 -%}{{ section.settings.image_2 | img_url: '1100x' }} 1100w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 1500 -%}{{ section.settings.image_2 | img_url: '1500x' }} 1500w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 1780 -%}{{ section.settings.image_2 | img_url: '1780x' }} 1780w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 2000 -%}{{ section.settings.image_2 | img_url: '2000x' }} 2000w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 3000 -%}{{ section.settings.image_2 | img_url: '3000x' }} 3000w,{%- endif -%}
-          {%- if section.settings.image_2.width >= 3840 -%}{{ section.settings.image_2 | img_url: '3840x' }} 3840w,{%- endif -%}"
-        sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
-        src="{{ section.settings.image_2 | img_url: '1500x' }}"
-        loading="lazy"
-        alt="{{ section.settings.image_2.alt | escape }}"
-        width="{{ section.settings.image_2.width }}"
-        height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio }}"
-        class="banner__media-image-{{imgCount}}">
-    </div>
-  {%- endif -%}
-  
-  {%- if section.settings.image_3 != blank -%}
-   <div class="banner__media media banner__media-{{imgCount}}">
-      <img
-        srcset="{%- if section.settings.image_3.width >= 375 -%}{{ section.settings.image_3 | img_url: '375x' }} 375w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 750 -%}{{ section.settings.image_3 | img_url: '750x' }} 750w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 1100 -%}{{ section.settings.image_3 | img_url: '1100x' }} 1100w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 1500 -%}{{ section.settings.image_3 | img_url: '1500x' }} 1500w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 1780 -%}{{ section.settings.image_3 | img_url: '1780x' }} 1780w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 2000 -%}{{ section.settings.image_3 | img_url: '2000x' }} 2000w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 3000 -%}{{ section.settings.image_3 | img_url: '3000x' }} 3000w,{%- endif -%}
-          {%- if section.settings.image_3.width >= 3840 -%}{{ section.settings.image_3 | img_url: '3840x' }} 3840w,{%- endif -%}"
-        sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
-        src="{{ section.settings.image_3 | img_url: '1500x' }}"
-        loading="lazy"
-        alt="{{ section.settings.image_3.alt | escape }}"
-        width="{{ section.settings.image_3.width }}"
-        height="{{ section.settings.image_3.width | divided_by: section.settings.image_3.aspect_ratio }}"
-        class="banner__media-image-{{imgCount}}">
-    </div>
-  {%- endif -%}
-  
-  {%- if section.settings.image_4 != blank -%}
-   <div class="banner__media media banner__media-{{imgCount}}">
-      <img
-        srcset="{%- if section.settings.image_4.width >= 375 -%}{{ section.settings.image_4 | img_url: '375x' }} 375w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 750 -%}{{ section.settings.image_4 | img_url: '750x' }} 750w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 1100 -%}{{ section.settings.image_4 | img_url: '1100x' }} 1100w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 1500 -%}{{ section.settings.image_4 | img_url: '1500x' }} 1500w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 1780 -%}{{ section.settings.image_4 | img_url: '1780x' }} 1780w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 2000 -%}{{ section.settings.image_4 | img_url: '2000x' }} 2000w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 3000 -%}{{ section.settings.image_4 | img_url: '3000x' }} 3000w,{%- endif -%}
-          {%- if section.settings.image_4.width >= 3840 -%}{{ section.settings.image_4 | img_url: '3840x' }} 3840w,{%- endif -%}"
-        sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
-        src="{{ section.settings.image_4 | img_url: '1500x' }}"
-        loading="lazy"
-        alt="{{ section.settings.image_4.alt | escape }}"
-        width="{{ section.settings.image_4.width }}"
-        height="{{ section.settings.image_4.width | divided_by: section.settings.image_4.aspect_ratio }}"
-       class="banner__media-image-{{imgCount}}">
-    </div>
-  {%- endif -%}
+    {%- endif -%}
+    
   </div>
   
   
