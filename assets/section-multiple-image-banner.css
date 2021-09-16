@@ -62,10 +62,10 @@
   .banner:not(.banner--adapt):not(.banner--stacked):not(.banner--mobile-bottom) > .banner__content {
     min-height: 39rem;
   }
-  .img_wrap{
-    display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .img_wrap, .flickity-slider{
+    display:flex!important;
+    justify-content: space-between!important;
+    flex-wrap: wrap!important;
   }
   
 }
