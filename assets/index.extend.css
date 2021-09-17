@@ -4,7 +4,7 @@ span.card-information__text.h5 {
  
 }
 .text-right {
-  width: auto;
+  width: auto!important;
   margin: 0!important;
   float: right;
   padding: 0!important;
