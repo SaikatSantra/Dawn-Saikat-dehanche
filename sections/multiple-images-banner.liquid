@@ -25,7 +25,11 @@
 
 .media>img {
     object-fit: contain;
-
+}
+@media screen and (min-width: 750px){
+.banner {
+min-height: 48rem;
+}
 }
 {%- if section.settings.adapt_height_first_imagee and imgCount > 0 -%}
 
