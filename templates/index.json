@@ -134,65 +134,11 @@
         "show_text_below": true,
         "show_slider": true
       }
-    },
-    "16318808456cfae02e": {
-      "type": "multicolumn",
-      "blocks": {
-        "16318808456cfae02e-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
-            "title": "",
-            "text": ""
-          }
-        },
-        "16318808456cfae02e-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
-            "title": "",
-            "text": ""
-          }
-        },
-        "16318808456cfae02e-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "",
-            "text": ""
-          }
-        },
-        "10091a3e-77b1-44f2-a357-bd1684a5a8cd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "16318808456cfae02e-0",
-        "16318808456cfae02e-1",
-        "16318808456cfae02e-2",
-        "10091a3e-77b1-44f2-a357-bd1684a5a8cd"
-      ],
-      "settings": {
-        "title": "",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "center",
-        "background_style": "secondary",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false
-      }
     }
   },
   "order": [
     "1631860093bb3d171f",
     "1631719814361caad5",
-    "1631776596769e8f08",
-    "16318808456cfae02e"
+    "1631776596769e8f08"
   ]
 }
