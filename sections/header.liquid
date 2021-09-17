@@ -70,10 +70,18 @@
     z-index: 3;
     transform: translateY(0);
   }
-  {% endunless %}
+  
+  main#MainContent {
+    top: -120px;
+    position: relative;
+    display: block;
+}
   .header-wrapper.color-none.gradient {
     background: transparent;
 }
+  {% endunless %}
+  
+  
 </style>
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
