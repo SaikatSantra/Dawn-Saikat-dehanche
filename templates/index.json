@@ -48,13 +48,44 @@
     },
     "1631776596769e8f08": {
       "type": "multiple-images-banner",
+      "blocks": {
+        "f61ae544-7388-4d07-82ff-ccad43beb056": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "ed14f502-a58e-4817-ab42-e30408322759": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "c2dc2d9b-09f6-4acb-aeaf-32e49fde9861": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "f61ae544-7388-4d07-82ff-ccad43beb056",
+        "ed14f502-a58e-4817-ab42-e30408322759",
+        "c2dc2d9b-09f6-4acb-aeaf-32e49fde9861"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Untitlead-3.png",
         "image_2": "shopify:\/\/shop_images\/Untitled-a3.png",
         "image_3": "shopify:\/\/shop_images\/Untitled-3.png",
-        "adapt_height_first_image": true,
+        "adapt_height_first_image": false,
         "desktop_text_box_position": "center",
-        "show_text_box": true,
+        "show_text_box": false,
         "image_overlay_opacity": 0,
         "color_scheme": "background-1",
         "stack_images_on_mobile": true,
