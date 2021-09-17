@@ -20,6 +20,13 @@ height: {{section.settings.image.height}}
 {% if imgCount > 2 and section.settings.show_slider %}
 <script src="{{ 'vendor.js' | asset_url }}"></script>
 {{ 'vendor.css' | asset_url | stylesheet_tag }}
+
+<style>
+#Banner-{{ section.id }} .flickity-viewport, .carousel {
+ height:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 | times: 2 }}px!important;
+}
+</style>
+
 {% endif %}
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
@@ -57,18 +64,8 @@ padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 
       display: block;
     }
   }
- {% else %}
-
-
-
 {%- endif -%}
 
-
-
-#Banner-{{ section.id }} .flickity-viewport, .carousel {
- height:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 | times: 2 }}px!important;
-{% comment %}height:334px!important;{% endcomment %}
-}
 {%- endstyle -%}
 
 {%- style -%}
