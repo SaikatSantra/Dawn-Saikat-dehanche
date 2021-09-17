@@ -12,7 +12,7 @@
 {%- endstyle -%}
 {% endif %}
 
-<div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div id="section_{{section.id}}" class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="{% if section.settings.width == 'wide'%} wide-width {% else %}page-width{% endif %}">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
       <h2 class="title">
