@@ -35,8 +35,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-        "image_2": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "desktop_text_box_position": "center",
         "show_text_box": false,
         "image_overlay_opacity": 0,
