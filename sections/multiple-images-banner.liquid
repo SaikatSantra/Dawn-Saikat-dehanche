@@ -22,6 +22,11 @@
 {{ 'section-multiple-image-banner.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
+
+.media>img {
+    object-fit: contain;
+
+}
 {%- if section.settings.adapt_height_first_imagee and imgCount > 0 -%}
 
     @media screen and (max-width: 749px) {
