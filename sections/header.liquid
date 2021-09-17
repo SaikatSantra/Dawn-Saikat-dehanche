@@ -61,9 +61,7 @@
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
-    main#MainContent {
-    top: -120px!important;
-    }
+    
     
   }
   
@@ -74,7 +72,11 @@
     z-index: 3;
     transform: translateY(0);
   }
-  
+  @media screen and (min-width: 750px) {
+    main#MainContent {
+      top: -120px!important;
+    }
+  }
   main#MainContent {
     top: -65px;
     position: relative;
@@ -85,7 +87,7 @@
   }
   .header-wrapper.color-none.gradient {
     background: transparent;
-}
+  }
   {% endunless %}
   
   
