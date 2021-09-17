@@ -3,9 +3,12 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 {% if section.settings.width == 'wide'%}
 <style>
-  #shopify-section-template--{{section.id}} .multicolumn,#shopify-section-template--{{section.id}} .multicolumn-card__image-wrapper {
+  #shopify-section-template--{{section.id}} .multicolumn{
     margin: 0!important;
-}
+  }
+  #shopify-section-template--{{section.id}} .multicolumn-card__image-wrapper {
+    margin: 0!important;
+  }
 </style>
 {% endif %}
 
