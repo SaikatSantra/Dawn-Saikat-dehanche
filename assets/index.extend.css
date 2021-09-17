@@ -1,0 +1,15 @@
+/* Collection grid */
+span.card-information__text.h5 {
+    width: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+  .text-right {
+    width: auto;
+    margin: 0!important;
+    float: right;
+    padding: 0;
+    text-align: right;
+}
