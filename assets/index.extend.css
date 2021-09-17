@@ -1,10 +1,7 @@
 /* Collection grid */
 span.card-information__text.h5 {
-  width: auto;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  vertical-align: middle;
+  width: 50%;
+ 
 }
 .text-right {
   width: auto;
@@ -12,4 +9,13 @@ span.card-information__text.h5 {
   float: right;
   padding: 0!important;
   text-align: right;
+}
+.card-information__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+span.caption-large.light {
+    width: 100%;
 }
