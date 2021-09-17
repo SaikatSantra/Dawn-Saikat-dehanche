@@ -33,7 +33,7 @@
 object-position: center bottom;
 }
 
-{%- if section.settings.adapt_height_first_image and imgCount > 0 -%}
+{%- if imgCount == 1 -%}
 
     @media screen and (max-width: 749px) {
     #Banner-{{ section.id }}::before,
@@ -113,7 +113,7 @@ padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 
 </style>
 
 
-<div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and imgCount > 0 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+<div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile %} banner--stacked{% endif %}{% if imgCount == 1 %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   
   <div class="{% if imgCount > 2 and section.settings.show_slider %}carousel{% else %} img_wrap {% endif %}" {% if imgCount > 2 %} data-flickity='{ "adaptiveHeight": true, "cellAlign": "left", "contain": true, "draggable": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true, "watchCSS": true }' {% endif %}>
  
