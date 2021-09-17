@@ -113,7 +113,7 @@
     </div>
     {%- endif -%}
     {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media banner__media-{{imgCount}}">
+    <div class="banner__media media {% if imgCount == 0 %} placeholder{% endif %} banner__media-{{imgCount}}">
       <img
            srcset="{%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | img_url: '375x' }} 375w,{%- endif -%}
                    {%- if section.settings.image_2.width >= 750 -%}{{ section.settings.image_2 | img_url: '750x' }} 750w,{%- endif -%}
@@ -134,7 +134,7 @@
     {%- endif -%}
 
     {%- if section.settings.image_3 != blank -%}
-    <div class="banner__media media banner__media-{{imgCount}}">
+    <div class="banner__media media {% if imgCount == 0 %} placeholder{% endif %} banner__media-{{imgCount}}">
       <img
            srcset="{%- if section.settings.image_3.width >= 375 -%}{{ section.settings.image_3 | img_url: '375x' }} 375w,{%- endif -%}
                    {%- if section.settings.image_3.width >= 750 -%}{{ section.settings.image_3 | img_url: '750x' }} 750w,{%- endif -%}
@@ -155,7 +155,7 @@
     {%- endif -%}
 
     {%- if section.settings.image_4 != blank -%}
-    <div class="banner__media media banner__media-{{imgCount}}">
+    <div class="banner__media media {% if imgCount == 0 %} placeholder{% endif %} banner__media-{{imgCount}}">
       <img
            srcset="{%- if section.settings.image_4.width >= 375 -%}{{ section.settings.image_4 | img_url: '375x' }} 375w,{%- endif -%}
                    {%- if section.settings.image_4.width >= 750 -%}{{ section.settings.image_4 | img_url: '750x' }} 750w,{%- endif -%}
