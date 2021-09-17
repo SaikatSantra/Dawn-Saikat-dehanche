@@ -35,8 +35,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/1for-2_jpg.png",
-        "image_2": "shopify:\/\/shop_images\/for-2.jpg",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "desktop_text_box_position": "center",
         "show_text_box": false,
         "image_overlay_opacity": 0,
