@@ -810,8 +810,8 @@
           "label": "Show separator line"
         },
         "enable_sticky_header": {
-          "label": "Enable sticky header",
-          "info": "Header shows on the screen as customers scroll up."
+          "label": "Enable sticky header ",
+          "info": "Header shows on the screen as customers scroll up. when it disable not flick sticky hase been remove nas smooth sticky will activate and background will goes from top"
         }
       }
     },
