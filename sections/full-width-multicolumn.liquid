@@ -2,14 +2,14 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 {% if section.settings.width == 'wide'%}
-<style>
+ {%- style -%}
   #shopify-section-template--{{section.id}} .multicolumn{
     margin: 0!important;
   }
   #shopify-section-template--{{section.id}} .multicolumn-card__image-wrapper {
     margin: 0!important;
   }
-</style>
+{%- endstyle -%}
 {% endif %}
 
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
