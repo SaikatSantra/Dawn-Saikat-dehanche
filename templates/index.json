@@ -142,32 +142,32 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product,<\/p>"
+            "title": "",
+            "text": ""
           }
         },
         "16318808456cfae02e-1": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, <\/p>"
+            "title": "",
+            "text": ""
           }
         },
         "16318808456cfae02e-2": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product,<\/p>"
+            "title": "",
+            "text": ""
           }
         },
         "10091a3e-77b1-44f2-a357-bd1684a5a8cd": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product,<\/p>"
+            "title": "",
+            "text": ""
           }
         }
       },
@@ -179,7 +179,7 @@
       ],
       "settings": {
         "title": "",
-        "image_width": "half",
+        "image_width": "full",
         "image_ratio": "adapt",
         "column_alignment": "center",
         "background_style": "secondary",
