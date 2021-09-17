@@ -14,6 +14,7 @@
     "social_instagram_link": "http:\/\/instagram.com\/shopify",
     "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
     "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
+    "currency_code_enabled": false,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
