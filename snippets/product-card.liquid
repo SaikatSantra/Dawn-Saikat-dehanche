@@ -96,7 +96,7 @@
             {{ product_card_product.title | escape }}
           </span>
         {%- endif -%}
-        <span class="card-information__text h5">
+        <span class="card-information__text h5 text-right">
         {% render 'price', product: product_card_product, price_class: '' %}
         </span>
 
@@ -128,3 +128,17 @@
     </div>
   </a>
 </div>
+
+
+<style>
+span.card-information__text.h5 {
+    width: 50%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+  .text-right{
+  text-align:right;
+  }
+</style>
