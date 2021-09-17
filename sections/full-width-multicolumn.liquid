@@ -1,9 +1,16 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+{% if section.settings.width == 'wide'%}
+<style>
+.multicolumn, .multicolumn-card__image-wrapper {
+    margin: 0!important;
+}
+</style>
+{% endif %}
 
 <div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div class="{% if section.settings.width == 'wide'%} {% else %}page-width{% endif %}">
+  <div class="{% if section.settings.width == 'wide'%} wide-width {% else %}page-width{% endif %}">
     <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
       <h2 class="title">
         {{ section.settings.title | escape }}
