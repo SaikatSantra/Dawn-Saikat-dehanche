@@ -27,8 +27,7 @@
     #Banner-{{ section.id }}::before,
     #Banner-{{ section.id }} .banner__media::before,
     #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-  {% comment %}  padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;{% endcomment %}
- padding-bottom:0%;
+padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;  {% comment %}  {% endcomment %}
     content: '';
     display: block;
     }
