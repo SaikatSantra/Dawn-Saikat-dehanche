@@ -182,7 +182,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "column_alignment": "center",
-        "width": "wide",
+        "width": "boxed",
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
