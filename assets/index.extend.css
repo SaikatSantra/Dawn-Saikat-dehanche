@@ -1,7 +1,9 @@
 /* Collection grid */
 span.card-information__text.h5 {
   width: 50%;
- 
+     font-size: 1.6rem;
+    letter-spacing: .1rem;
+    line-height: 1.5;
 }
 .text-right {
   width: auto!important;
