@@ -34,5 +34,17 @@
 {% elsif template contains 'collection' %} 
 {% assign product = product %}
 {{product.id}}
-
+ <div class="product-options__section d-flex flex-wrap">
+      
+      {% for g in groups %}
+      {% assign color = g | split:":" | first  %}
+      {% assign pHandle = g | split:":" | last |strip %}
+      {% assign pLink = g | split:":" | last |strip | prepend:"/products/"   %}
+      {% assign image_name = color | handle | append:".png"  %}
+      {% assign image = images[image_name] %}
+      <div image="{{image}}" style="{% if image contains image_name %}background-image: url({{ image | img_url:'35x' }});{% endif %} background-color:{{ color | handleize }};" class="product-options__value product-options__value--circle standard-color-{{ color | handleize }} text-hide border  cursor-pointer {% if pHandle == product.handle %} active{% endif %}">
+        <a  href="{{pLink |strip }}">{{ color  }}</a>          
+      </div> 
+      {% endfor %}
+    </div>
 {% endif %}
