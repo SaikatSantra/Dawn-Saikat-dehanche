@@ -33,9 +33,9 @@
 </div>
 {% elsif template contains 'collection' %} 
 {% assign product = product %}
-
+ <label class=""><span>More Color+</span></label>
  <div productId="{{product.id}}" class="product-options__section d-flex flex-wrap">
-   <label class=""><span>More Color+</span></label>
+  
       {% for g in groups %}
       {% assign color = g | split:":" | first  %}
       {% assign pHandle = g | split:":" | last |strip %}
