@@ -1,3 +1,6 @@
+.hide{
+display:none!important;
+}
 /* Collection grid */
 span.card-information__text.h5 {
   width: 50%;
