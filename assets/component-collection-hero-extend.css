@@ -1,0 +1,23 @@
+.collection-hero__image-container.media {
+    margin-left: 0;
+    min-height: 50vh;
+}
+.collection-hero__innerr.page-width{
+  right: 0;
+  max-width: var(--page-width);
+    margin: 0 auto;
+}
+
+
+h1.collection-hero__title {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+.collection-hero__text-wrapper{
+text-align:center;
+}
