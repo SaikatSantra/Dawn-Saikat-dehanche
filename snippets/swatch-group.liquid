@@ -33,8 +33,8 @@
 </div>
 {% elsif template contains 'collection' %} 
 {% assign product = product %}
-{{product.id}}
- <div class="product-options__section d-flex flex-wrap">
+
+ <div productId="{{product.id}}" class="product-options__section d-flex flex-wrap">
       
       {% for g in groups %}
       {% assign color = g | split:":" | first  %}
