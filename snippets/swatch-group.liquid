@@ -33,6 +33,8 @@
 </div>
 {% elsif template contains 'collection' %} 
 {% assign product = product %}
+
+{% if groups != blank %}
  <label class=""><span>More Color+</span></label>
  <div productId="{{product.id}}" class="product-options__section d-flex flex-wrap">
   
@@ -48,6 +50,9 @@
    
       {% endfor %}
     </div>
+{% endif %}
+
+
 {% endif %}
 
 <style>
