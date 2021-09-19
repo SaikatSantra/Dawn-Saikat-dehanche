@@ -49,7 +49,12 @@
                       <ul class="facets__list list-unstyled" role="list">
                         {%- for value in filter.values -%}
                           <li class="list-menu__item facets__item">
-                            <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
+                            {% if filter.label == "Color" %}
+                            {% assign image_name = value.label | escape  | handle | append:".png"  %}
+                            {% assign image = images[image_name] %}
+                            {% endif %}
+                            
+                            <label {% if filter.label == "Color" %} valueData="{{value.label | escape }}" style="{% if image contains image_name %}background-image: url({{ image | img_url:'35x' }});{% endif %} background-color:{{ color | handleize }};" {% endif %} for="Filter-{{ filter.label | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
                               <input type="checkbox"
                                 name="{{ value.param_name }}"
                                 value="{{ value.value }}"
