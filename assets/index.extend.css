@@ -24,3 +24,17 @@ span.card-information__text.h5 {
 span.caption-large.light {
     width: 100%;
 }
+
+
+.button.loading:after {
+    animation: loading var(--duration-long) infinite linear;
+    border: .5rem solid rgba(var(--color-button-text),.4);
+    border-left: .5rem solid rgb(var(--color-button-text));
+    border-radius: 100%;
+    box-sizing: content-box;
+    content: '';
+    display: block;
+    height: 2rem;
+    position: absolute;
+    width: 2rem;
+}
