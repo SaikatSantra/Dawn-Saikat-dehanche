@@ -255,51 +255,85 @@
                   {% case filter.type %}
                   {% when 'list' %}
                     <details class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
-                      <summary class="mobile-facets__summary focus-inset" fLabel="{{ filter.label | escape }}">
-                        <div>
-                          <span>{{ filter.label | escape }}</span>                        
-                          <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                          <noscript>{% render 'icon-caret' %}</noscript>
-                        </div>
-                      </summary>
-                      <div class="mobile-facets__submenu">
-                        <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
-                          {% render 'icon-arrow' %}
-                          {{ filter.label | escape }}
-                        </button>
-                        <ul class="mobile-facets__list list-unstyled" role="list">
-                          {%- for value in filter.values -%}
-                            <li class="mobile-facets__item list-menu__item">
-                              <label for="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}" class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}">
-                                <input class="mobile-facets__checkbox" type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}"
-                                  {% if value.active %}checked{% endif %}
-                                  {% if value.count == 0 and value.active == false %}disabled{% endif %}
-                                >
+                      
+                      
+                      {% unless filter.label == "Color" %}
+                              <summary class="mobile-facets__summary focus-inset" fLabel="{{ filter.label | escape }}">
+                                <div>
+                                  <span>{{ filter.label | escape }}</span>                        
+                                  <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
+                                  <noscript>{% render 'icon-caret' %}</noscript>
+                                </div>
+                              </summary>
 
-                                <span class="mobile-facets__highlight"></span>
+                              <div class="mobile-facets__submenu">
+                                <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
+                                  {% render 'icon-arrow' %}
+                                  {{ filter.label | escape }}
+                                </button>
+                                <ul class="mobile-facets__list list-unstyled" role="list">
+                                  {%- for value in filter.values -%}
+                                    <li class="mobile-facets__item list-menu__item">
+                                      <label for="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}" class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}">
+                                        <input class="mobile-facets__checkbox" type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}"
+                                          {% if value.active %}checked{% endif %}
+                                          {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                                        >
 
-                                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                </svg>
+                                        <span class="mobile-facets__highlight"></span>
 
-                                <svg class="icon icon-checkmark" width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                          <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                        </svg>
 
-                                {{ value.label | escape }} ({{ value.count }})
-                              </label>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
+                                        <svg class="icon icon-checkmark" width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
 
-                        <div class="no-js-hidden mobile-facets__footer">
-                          <facet-remove class="mobile-facets__clear-wrapper">
-                            <a href="{{ collection.url }}" class="mobile-facets__clear underlined-link">{{ 'sections.collection_template.clear' | t }}</a>
-                          </facet-remove>
-                          <button type="button" class="no-js-hidden button button--primary" onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()">{{ 'sections.collection_template.apply' | t }}</button>
-                          <noscript><button class="button button--primary">{{ 'sections.collection_template.apply' | t }}</button></noscript>
-                        </div>
+                                        {{ value.label | escape }} ({{ value.count }})
+                                      </label>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+
+                                <div class="no-js-hidden mobile-facets__footer">
+                                  <facet-remove class="mobile-facets__clear-wrapper">
+                                    <a href="{{ collection.url }}" class="mobile-facets__clear underlined-link">{{ 'sections.collection_template.clear' | t }}</a>
+                                  </facet-remove>
+                                  <button type="button" class="no-js-hidden button button--primary" onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()">{{ 'sections.collection_template.apply' | t }}</button>
+                                  <noscript><button class="button button--primary">{{ 'sections.collection_template.apply' | t }}</button></noscript>
+                                </div>
+                              </div> 
+                        {% else %}
+                      <div class="active-filters">
+                        <a href="{{ routes.search_url }}?sort_by={{ search.sort_by }}&q={{ search.terms }}" class="active-filters__clear">Clear all</a>
+
+                        {%- for filter in search.filters -%}
+                        {%- if filter.type == "price_range" -%}
+                        {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                        <a class="active-filters__remove-filter" href="{{ filter.url_to_remove }}">
+                          {%- assign min_value = filter.min_value.value | default: 0 -%}
+                          {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+
+                          {{ min_value | money }} - {{ max_value | money }} X
+                        </a>
+                        {%- endif -%}
+                        {%- else -%}
+                        {%- for filter_value in filter.active_values -%}
+                        <a class="active-filters__remove-filter" href="{{ filter_value.url_to_remove }}">
+                          {{ filter_value.label }} X
+                        </a>
+                        {%- endfor -%}
+                        {%- endif- %}
+    {%- endfor -%}
                       </div>
+                     
+                      
+                      
+                      
+                      {% endunless%}
+                      
+                      
                     </details>
                   {% when 'price_range' %}
                     <details class="mobile-facets__details js-filter" data-index="mobile-{{ forloop.index }}">
