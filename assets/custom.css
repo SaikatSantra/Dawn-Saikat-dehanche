@@ -15,4 +15,6 @@
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown; 
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }
