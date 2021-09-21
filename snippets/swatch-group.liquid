@@ -36,7 +36,7 @@
 
 {% if groups != blank %}
  <label class=""><span>More Color+</span></label>
- <div productId="{{product.id}}" class="product-options__section d-flex flex-wrap">
+ <div productId="{{product.id}}" class="product-options__section d-flex flex-wrap fadeInDown">
   
       {% for g in groups %}
       {% assign color = g | split:":" | first  %}
