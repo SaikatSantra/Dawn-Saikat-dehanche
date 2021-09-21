@@ -44,3 +44,14 @@
   justify-content: flex-end;
   width: 30px;
 }
+.product-options__section a {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  padding: 2px;
+  margin: 0 3px;
+}
