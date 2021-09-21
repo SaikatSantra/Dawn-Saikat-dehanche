@@ -154,6 +154,43 @@
                       </div>
                     </price-range>
                   </details>
+
+
+
+
+
+<price-range class="price-range">
+  {%- assign min_value = filter.min_value.value | default: 0.0 | divided_by: 100.0 -%}
+  {%- assign max_value = filter.max_value.value | default: filter.range_max | divided_by: 100.0 -%}
+  {%- assign range_max = filter.range_max | divided_by: 100.0 | ceil -%}
+
+  {% assign lower_bound_progress = min_value | divided_by: range_max | times: 100.0 %}
+  {% assign higher_bound_progress = max_value | divided_by: range_max | times: 100.0 %}
+
+  <div class="price-range__range-group range-group" style="--range-min: {{ lower_bound_progress }}%; --range-max: {{ higher_bound_progress }}%">
+    <input type="range" aria-label="{{ 'collection.filter.price_filter_from' | t }}" class="range" min="0" max="{{ range_max | ceil }}" value="{{ min_value | ceil }}">
+    <input type="range" aria-label="{{ 'collection.filter.price_filter_to' | t }}" class="range" min="0" max="{{ range_max | ceil }}" value="{{ max_value | ceil }}">
+  </div>
+
+  <div class="price-range__input-group">
+    <div class="price-range__input input-prefix text--xsmall">
+      <span class="input-prefix__value text--subdued">{{ cart.currency.symbol }}</span>
+      <input aria-label="{{ 'collection.filter.price_filter_from' | t }}" class="input-prefix__field" type="number" inputmode="numeric" {% if filter.min_value.value %}value="{{ min_value | ceil }}"{% endif %} name="{{ filter.min_value.param_name }}" id="{{ filter.min_value.param_name | handle }}" min="0" max="{{ max_value | ceil }}" placeholder="0">
+    </div>
+
+    <span class="price-range__delimiter text--small">-</span>
+
+    <div class="price-range__input input-prefix text--xsmall">
+      <span class="input-prefix__value text--subdued">{{ cart.currency.symbol }}</span>
+      <input aria-label="{{ 'collection.filter.price_filter_to' | t }}" class="input-prefix__field" type="number" inputmode="numeric" {% if filter.max_value.value %}value="{{ max_value | ceil }}"{% endif %} name="{{ filter.max_value.param_name }}" id="{{ filter.max_value.param_name | handle }}" min="{{ min_value | ceil }}" max="{{ range_max | ceil }}" placeholder="{{ range_max | ceil }}">
+    </div>
+  </div>
+</price-range>
+
+
+
+
+
                 {% endcase %}
               {%- endfor -%}
               <noscript>
