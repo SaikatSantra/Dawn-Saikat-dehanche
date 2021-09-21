@@ -1,7 +1,40 @@
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
+<style>
+.close_button:before {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+}
+.close_button:after {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+    transform: rotate(90deg);
+}
+  
+  
+</style>
+
 <div class="newsletter center{% if section.settings.full_width == false %} newsletter--narrow page-width{% endif%}">
+  <a class="close_button">
+  
+  </a>
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -62,7 +95,7 @@
 {
   "name": "t:sections.newsletter.name",
   "tag": "section",
-  "class": "spaced-section spaced-section--full-width",
+  "class": "spaced-section spaced-section--full-width newsletter_section",
   "settings": [
     {
       "type": "select",
