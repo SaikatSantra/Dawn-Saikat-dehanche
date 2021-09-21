@@ -58,3 +58,11 @@
   border-radius: 50%;
 }
 .product-options__section a:hover {border-color: #000000;}
+
+
+
+.product__info-wrapper .product__info-container {
+  margin: 20vh auto 0;
+  max-width: 360px;
+  padding: 30px;
+}
