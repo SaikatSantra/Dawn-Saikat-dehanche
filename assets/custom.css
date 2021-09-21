@@ -40,5 +40,6 @@
 .product-options__section {
   display: -webkit-flex;
   display: flex;
+  flex-wrap: wrap;
   width: 30px;
 }
