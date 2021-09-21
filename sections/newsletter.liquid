@@ -2,6 +2,18 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 <style>
+  .close_button{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 30px;
+    top: 20px;
+    z-index: 1;
+    transform: rotate(45deg);
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
 .close_button:before {
     top: 50%;
     margin-top: -1px;
