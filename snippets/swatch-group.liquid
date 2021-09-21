@@ -36,7 +36,7 @@
 
 {% if groups != blank %}
  <label class=""><span>More Color+</span></label>
- <div productId="{{product.id}}" class="product-options__section d-flex flex-wrap fadeInDown">
+ <div productId="{{product.id}}" class="product-options__section fadeInDown">
   
       {% for g in groups %}
       {% assign color = g | split:":" | first  %}
@@ -73,5 +73,10 @@
   }
   .col-swatch-group label {
     font-size: 10px;
+  }
+  .product-options__section {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
   }
 </style>
