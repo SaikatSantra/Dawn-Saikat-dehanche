@@ -2,7 +2,10 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .close_button{
+  .newsletter_section:not(.active_sticky) .close_button{
+  display:none;
+  }
+  .newsletter_section.active_sticky .close_button{
     position: absolute;
     width: 16px;
     height: 16px;
@@ -14,7 +17,7 @@
     background-color: transparent;
     padding: 0;
 }
-.close_button:before {
+ .newsletter_section.active_sticky .close_button:before {
     top: 50%;
     margin-top: -1px;
     cursor: pointer;
@@ -26,7 +29,7 @@
     display: block;
     content: "";
 }
-.close_button:after {
+ .newsletter_section.active_sticky .close_button:after {
     top: 50%;
     margin-top: -1px;
     cursor: pointer;
@@ -39,7 +42,7 @@
     content: "";
     transform: rotate(90deg);
 }
-  .newsletter_section {
+  .newsletter_section.active_sticky {
     position: sticky;
     bottom: 0;
     z-index: 9;
@@ -111,7 +114,7 @@
 {
   "name": "t:sections.newsletter.name",
   "tag": "section",
-  "class": "spaced-section spaced-section--full-width newsletter_section",
+  "class": "spaced-section spaced-section--full-width newsletter_section active_sticky",
   "settings": [
     {
       "type": "select",
