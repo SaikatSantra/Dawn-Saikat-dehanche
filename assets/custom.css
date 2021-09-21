@@ -36,9 +36,7 @@
   right: 1rem;
   position:absolute;
 }
-.col-swatch-group label {
-  font-size: 10px;
-}
+.col-swatch-group label {font-size: 10px;}
 .product-options__section {display: none;}
 .card__inner:hover .product-options__section {
   display: -webkit-flex;
