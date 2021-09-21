@@ -38,3 +38,14 @@ span.caption-large.light {
     position: absolute;
     width: 2rem;
 }
+
+
+/* newsletter */
+
+.newsletter__wrapper {
+    background-image: url(https://www.dermatica.co.uk/resources/img/redesign/B85/3x/tinified/Desktop_imagery_3x-548d64d….png);
+    background-repeat: no-repeat;
+    background-size: 517px;
+    background-position: left center;
+    background-attachment: local;
+}
