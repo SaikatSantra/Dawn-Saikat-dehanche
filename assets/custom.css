@@ -67,4 +67,8 @@
   padding: 30px;
   text-align: center;
 }
-.product .price {justify-content: center;}
+.product__info-wrapper .product__info-container .product .price {justify-content: center;}
+.product__info-wrapper .product__info-container .quantity {
+  margin-left: auto;
+  margin-right: auto;
+}
