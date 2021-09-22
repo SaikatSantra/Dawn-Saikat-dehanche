@@ -58,7 +58,7 @@
   border-radius: 50%;
 }
 .product-options__section a:hover {border-color: #000000;}
-.collection-product-count {text-align: left;}
+.collection-filters .collection-product-count {text-align: left;}
 .mobile-facets__wrapper {justify-content: flex-end;}
 .mobile-facets__wrapper .mobile-facets__inner {
   margin-left: 0;
