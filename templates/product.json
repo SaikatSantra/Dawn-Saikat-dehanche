@@ -40,15 +40,6 @@
             "content_4": ""
           }
         },
-        "041e2676-35ec-470e-a808-7ebd7dbc1597": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible tab",
-            "content": "",
-            "page": "",
-            "icon": "none"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -79,7 +70,6 @@
         "subtitle",
         "price",
         "0352394f-5828-40fa-9138-63a81a082f61",
-        "041e2676-35ec-470e-a808-7ebd7dbc1597",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
