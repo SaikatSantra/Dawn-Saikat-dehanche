@@ -58,6 +58,10 @@
   border-radius: 50%;
 }
 .product-options__section a:hover {border-color: #000000;}
+.mobile-facets__wrapper .mobile-facets__inner {
+  margin-left: 0;
+  margin-right: auto;
+}
 
 
 
