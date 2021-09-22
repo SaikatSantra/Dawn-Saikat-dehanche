@@ -119,6 +119,18 @@
                 </div>
               </details>
             </div>
+        {%- when 'content_tab' -%}
+        {% for i in (1..4) %}
+        {% capture title %}heading_{{i}}{% endcapture %}
+        {% capture content %}content_{{i}}{% endcapture %}
+        {% if block.settings[title] != blank %}
+        <div class="tabhead">
+          <span class="active" data-tab="tab-{{forloop.index}}">{{block.settings[title]}}</span>
+        </div>
+        <div id="tab-{{forloop.index}}" class="tabcontent active">{{block.settings[content]}}</div>
+        {% endif %}
+        {% endfor %}
+        
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
@@ -488,6 +500,18 @@
       {%- endfor -%}
     ]
   }
+</script>
+
+<script>
+  jQuery(function($){
+    $('.tabhead  span').click(function(){
+      var tab_id = $(this).attr('data-tab');
+      $('#'+tab_id).siblings().removeClass('active');
+      $('#'+tab_id).addClass('active');
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+    });
+  });
 </script>
 
 {% schema %}
