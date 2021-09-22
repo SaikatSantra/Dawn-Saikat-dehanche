@@ -133,7 +133,7 @@
         {% for i in (1..4) %}
         {% capture content %}content_{{i}}{% endcapture %}
         {% if block.settings[content] != blank %}
-        <div id="tab-{{forloop.index}}" class="tabcontent{% if forloop.index == 1 %} active{% endif %}">{{block.settings[content]}}</div>  
+        <div id="content_{{forloop.index}}" class="tabcontent"{% unless forloop.index == 2 %} style="display:none;"{% endunless %}>{{block.settings[content]}}</div>  
         {% endif %}
         {% endfor %}
         
