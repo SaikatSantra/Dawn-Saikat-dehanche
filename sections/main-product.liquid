@@ -508,13 +508,15 @@
 
 <script>
   jQuery(function($){
-    $('.tabhead  span').click(function(){
+    $('.tabhead span').click(function(){
       var tab_id = $(this).attr('data-tab');
-      $('#'+tab_id).siblings().removeClass('active');
-      $('#'+tab_id).addClass('active');
-      $(this).siblings().removeClass('active');
+
+      $('.tabhead span').removeClass('active');
+      $('.tab-content').removeClass('active');
+
       $(this).addClass('active');
-    });
+      $("#"+tab_id).addClass('active');
+    }); 
   });
 </script>
 
