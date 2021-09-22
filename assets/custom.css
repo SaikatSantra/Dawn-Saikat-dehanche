@@ -62,7 +62,7 @@
   margin-left: 0;
   margin-right: auto;
 }
-.js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
+.js #main-collection-filters .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
   transform: translateX(-105vw);
 }
 
