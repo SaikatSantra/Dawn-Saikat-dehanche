@@ -95,3 +95,12 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
   height: 100%;
   width: 100%;
 }
+.tabhead {
+  display: -webkit-flex;
+  display: flex;
+}
+.tabhead a {
+  color: #000000;
+  display: block;
+  margin: 0 10px;
+}
