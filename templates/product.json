@@ -27,6 +27,19 @@
           "settings": {
           }
         },
+        "0352394f-5828-40fa-9138-63a81a082f61": {
+          "type": "content_tab",
+          "settings": {
+            "heading_1": "Tab heading",
+            "content_1": "<p>Content 1<\/p>",
+            "heading_2": "Tab heading",
+            "content_2": "<p>Content 2<\/p>",
+            "heading_3": "Tab heading",
+            "content_3": "<p>content 3<\/p>",
+            "heading_4": "",
+            "content_4": ""
+          }
+        },
         "041e2676-35ec-470e-a808-7ebd7dbc1597": {
           "type": "collapsible_tab",
           "settings": {
@@ -65,6 +78,7 @@
         "title",
         "subtitle",
         "price",
+        "0352394f-5828-40fa-9138-63a81a082f61",
         "041e2676-35ec-470e-a808-7ebd7dbc1597",
         "variant_picker",
         "quantity_selector",
