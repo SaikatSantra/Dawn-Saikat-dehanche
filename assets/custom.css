@@ -57,6 +57,8 @@
   border: 1px solid transparent;
   border-radius: 50%;
   font-size: 0;
+  height: 100%;
+  width: 100%;
 }
 .product-options__section a:hover {border-color: #000000;}
 
