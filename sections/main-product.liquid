@@ -125,9 +125,9 @@
         {% capture content %}content_{{i}}{% endcapture %}
         {% if block.settings[title] != blank %}
         <div class="tabhead">
-          <span class="active" data-tab="tab-{{forloop.index}}">{{block.settings[title]}}</span>
+          <span class="" data-tab="tab-{{forloop.index}}">{{block.settings[title]}}</span>
         </div>
-        <div id="tab-{{forloop.index}}" class="tabcontent active">{{block.settings[content]}}</div>
+        <div id="tab-{{forloop.index}}" class="tabcontent">{{block.settings[content]}}</div>
         {% endif %}
         {% endfor %}
         
