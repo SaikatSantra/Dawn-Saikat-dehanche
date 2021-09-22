@@ -124,7 +124,7 @@
           {% for i in (1..4) %}
           {% capture title %}heading_{{i}}{% endcapture %}
           {% if block.settings[title] != blank %}
-          <a href="javascript:SwitchTab('tb_{{forloop.index}}', 'content_{{forloop.index}}');" id="tb_{{forloop.index}}" class="tabmenu{% if forloop.index == 2 %} active{% endif %}">
+          <a href="javascript:SwitchTab('tb_{{forloop.index}}', 'content_{{forloop.index}}');" id="tb_{{forloop.index}}" class="tabmenu{% if forloop.index == 1 %} active{% endif %}">
             {{block.settings[title]}}
             </a>
           {% endif %}
