@@ -127,7 +127,9 @@
         <div class="tabhead">
           <span class="" data-tab="tab-{{forloop.index}}">{{block.settings[title]}}</span>
         </div>
-        <div id="tab-{{forloop.index}}" class="tabcontent">{{block.settings[content]}}</div>
+        {% endif %}
+        {% if block.settings[content] != blank %}
+        <div id="tab-{{forloop.index}}" class="tabcontent">{{block.settings[content]}}</div>  
         {% endif %}
         {% endfor %}
         
