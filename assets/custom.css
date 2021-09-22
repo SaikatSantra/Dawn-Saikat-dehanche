@@ -77,3 +77,8 @@
   display: flex;
   justify-content: center;
 }
+.product__info-wrapper .product-options__section a {
+  font-size: 0;
+  height: 100%;
+  width: 100%;
+}
