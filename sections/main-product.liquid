@@ -120,14 +120,14 @@
               </details>
             </div>
         {%- when 'content_tab' -%}
-        {% for i in (1..4) %}
-        {% capture title %}heading_{{i}}{% endcapture %}
-        {% if block.settings[title] != blank %}
         <div class="tabhead">
+          {% for i in (1..4) %}
+          {% capture title %}heading_{{i}}{% endcapture %}
+          {% if block.settings[title] != blank %}
           <span class="" data-tab="tab-{{forloop.index}}">{{block.settings[title]}}</span>
+          {% endif %}
+          {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
         {% for i in (1..4) %}
         {% capture content %}content_{{i}}{% endcapture %}
         {% if block.settings[content] != blank %}
