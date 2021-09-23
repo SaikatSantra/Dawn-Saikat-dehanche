@@ -43,10 +43,18 @@
     transform: rotate(90deg);
 }
   .newsletter_section.active_sticky {
-    position: sticky;
+    position: absolute;
     bottom: 0;
-    z-index: 9;
-}
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #e5eef2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    transform: translate3d(0, 100%, 0);
+    transition: 0.4s transform ease-in-out !important;
+  }
   .mini_newsletter h4 {
     padding: 20px!important;
     margin: 0!important;
