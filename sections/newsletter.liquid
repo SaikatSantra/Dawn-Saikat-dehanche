@@ -42,11 +42,15 @@
     content: "";
     transform: rotate(90deg);
 }
-  .newsletter_section.active_sticky {
-    position: sticky;
+  .newsletter_section{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-sizing: border-box;
     bottom: 0;
     z-index: 9;
-}
+  }
   .mini_newsletter h4 {
     padding: 20px!important;
     margin: 0!important;
