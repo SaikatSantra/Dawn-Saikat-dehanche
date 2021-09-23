@@ -78,27 +78,12 @@
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_text_box_position }} page-width">
     <div class="banner__box color-{{ section.settings.color_scheme }}">
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'heading' -%}
-            <h2 class="banner__heading {% if block.settings.heading_size == 'medium' %}h1{% else %}h0{% endif %}" {{ block.shopify_attributes }}>
-              <span>{{ block.settings.heading | escape }}</span>
-            </h2>
-          {%- when 'text' -%}
-            <div class="banner__text" {{ block.shopify_attributes }}>
-              <span>{{ block.settings.text | escape }}</span>
-            </div>
-          {%- when 'buttons' -%}
-            <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_link_1 != blank and block.settings.button_label_2 != blank and block.settings.button_link_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.button_label_1 != blank -%}
-                <a{% if block.settings.button_link_1 != blank %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_1 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_1 | escape }}</a>
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                <a{% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_2 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_2 | escape }}</a>
-              {%- endif -%}
-            </div>
-        {%- endcase -%}
-      {%- endfor -%}
+      <h2 class="banner__heading {% if section.settings.heading_size == 'medium' %}h1{% else %}h0{% endif %}" {{ block.shopify_attributes }}>
+        <span>{{ section.settings.heading | escape }}</span>
+      </h2>
+      <div class="banner__text" {{ block.shopify_attributes }}>
+        <span>{{ section.settings.text | escape }}</span>
+      </div>
     </div>
   </div>
 </div>
@@ -124,6 +109,34 @@
       "id": "adapt_height_first_image",
       "default": false,
       "label": "t:sections.image-banner.settings.adapt_height_first_image.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Image banner",
+      "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "medium",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__1.label"
+        },
+        {
+        "value": "large",
+        "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__2.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.image-banner.blocks.heading.settings.heading_size.label"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Give customers details about the banner image(s) or content on the template.",
+      "label": "t:sections.image-banner.blocks.text.settings.text.label"
     },
     {
       "type": "select",
@@ -207,107 +220,9 @@
       "label": "t:sections.image-banner.settings.show_text_below.label"
     }
   ],
-  "blocks": [
-    {
-      "type": "heading",
-      "name": "t:sections.image-banner.blocks.heading.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Image banner",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "medium",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__1.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__2.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading_size.label"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "name": "t:sections.image-banner.blocks.text.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "default": "Give customers details about the banner image(s) or content on the template.",
-          "label": "t:sections.image-banner.blocks.text.settings.text.label"
-        }
-      ]
-    },
-    {
-      "type": "buttons",
-      "name": "t:sections.image-banner.blocks.buttons.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "button_label_1",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_1",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "buttons"
-        }
-      ]
+      "name": "t:sections.image-banner.presets.name"
     }
   ]
 }
