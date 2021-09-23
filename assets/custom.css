@@ -114,6 +114,7 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
 .product-tab,
 .product-options {
   height: auto;
+  min-height: 80px;
   opacity: 1;
   overflow: hidden;
   opacity: 1;
@@ -123,6 +124,7 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
 .hide-product-tab .product-options {
   height: 0;
   opacity: 0;
+  min-height: 0px;
 }
 .product__info-container>*+* {
   -webkit-transition: all .5s;
