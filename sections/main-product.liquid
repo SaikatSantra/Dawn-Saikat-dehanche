@@ -526,7 +526,33 @@ function SwitchTab(tab_id, tab_content) {
 	}
 	document.getElementById(tab_id).className = 'tabmenu active';
 }
-</script> 
+</script>  
+<script>
+  var $ = s => Array.prototype.slice.call(document.querySelectorAll(s));
+
+  //turn the elements into objects with target, area, and className properties
+  var elements = $("[scroll-class]").map(function(target) {
+    var area = target.getAttribute("scroll-trigger");
+    if (area) {
+      area = document.querySelector(area) || target;
+    } else {
+      area = target;
+    }
+    var className = target.getAttribute("scroll-class") || "scroll-activated"
+    return { target, area, className };
+  });
+
+  window.addEventListener("scroll", function() {
+    elements.forEach(function(scroll) {
+      var bounds = scroll.area.getBoundingClientRect();
+      if (bounds.top < window.innerHeight * .5) {
+        scroll.target.classList.add(scroll.className);
+      } else {
+        scroll.target.classList.remove(scroll.className);
+      }
+    })
+  });
+</script>
 
 {% schema %}
 {
