@@ -526,6 +526,14 @@ function SwitchTab(tab_id, tab_content) {
 	}
 	document.getElementById(tab_id).className = 'tabmenu active';
 }
+  
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+      $('#dynamic').addClass('newClass');
+    } else {
+      $('#dynamic').removeClass('newClass');
+    }
+  });
 </script>
 
 {% schema %}
