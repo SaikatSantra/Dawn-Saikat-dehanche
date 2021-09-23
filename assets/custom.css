@@ -114,12 +114,12 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
 .product-tab,
 .product-options {
   height: auto;
-  min-height: 80px;
   opacity: 1;
   overflow: hidden;
   opacity: 1;
   transition-property: height, opacity;
 }
+.product-options {min-height: 80px;}
 .hide-product-tab .product-tab,
 .hide-product-tab .product-options {
   height: 0;
