@@ -526,18 +526,17 @@ function SwitchTab(tab_id, tab_content) {
 	}
 	document.getElementById(tab_id).className = 'tabmenu active';
 }
-  $(function() {
-    var content_wrap = $(".product__info-wrapper");
+  
+  var content_wrap = document.getElementsByClassName("product__info-wrapper");
 
     $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      if (scroll >= 50) {
-        content_wrap.addClass("scuro");
-      } else {
-        content_wrap.removeClass("scuro");
-      }
+        var scroll = $(window).scrollTop();
+        if (scroll >= 50) {
+            content_wrap.addClass("scuro");
+        } else {
+            content_wrap.removeClass("scuro");
+        }
     });
-  });
 </script>
 
 {% schema %}
