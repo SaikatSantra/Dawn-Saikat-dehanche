@@ -30,12 +30,12 @@
         "0352394f-5828-40fa-9138-63a81a082f61": {
           "type": "content_tab",
           "settings": {
-            "heading_1": "Tab heading",
-            "content_1": "<p>Content 1<\/p>",
-            "heading_2": "Tab heading",
-            "content_2": "<p>Content 2<\/p>",
-            "heading_3": "Tab heading",
-            "content_3": "<p>content 3<\/p>",
+            "heading_1": "Description",
+            "content_1": "<p>{{ product.metafields.my_fields.short_description.value }}<\/p>",
+            "heading_2": "Details",
+            "content_2": "<p>{{ product.metafields.my_fields.product_details | metafield_tag }}<\/p>",
+            "heading_3": "Size guide",
+            "content_3": "<p>{{ product.metafields.my_fields.size_guide | metafield_tag }}<\/p>",
             "heading_4": "",
             "content_4": ""
           }
