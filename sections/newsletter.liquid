@@ -154,7 +154,7 @@ function removeClass(el, className) {
 </script>
 
 <div class="newsletter center{% if section.settings.full_width == false %} newsletter--narrow page-width{% endif%}">
-  <a class="close_button" onclick="removeClass('.newsletter_section', 'active_sticky')"> 
+  <a class="close_button" onclick="removeClass('.newsletter_section', 'open')"> 
   </a>
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient">
     {%- for block in section.blocks -%}
