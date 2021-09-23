@@ -119,3 +119,7 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
   opacity: 1;
   transition-property: height, opacity;
 }
+.hide-product-tab .product-tab {
+  height: 0;
+  opacity: 0;
+}
