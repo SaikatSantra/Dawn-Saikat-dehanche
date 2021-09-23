@@ -52,6 +52,43 @@
     margin: 0!important;
 }
   
+.plusIcon{  
+  width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+}
+  .plusIcon:before {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 0.2s ease-in-out;
+}
+  .plusIcon:after {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 0.2s ease-in-out;
+    transform: rotate(
+90deg);
+}
+  
 </style>
 <script>
 function removeClass(el, className) {
@@ -127,7 +164,7 @@ function removeClass(el, className) {
   </div>
 
 
-  <div class="mini_newsletter gradient color-{{ section.settings.color_scheme }}"><h4>Claim your exclusive discount</h4></div>
+  <div class="mini_newsletter gradient color-{{ section.settings.color_scheme }}"><h4>Claim your exclusive discount</h4><span class="plusIcon"></span></div>
 </div>
 
 {% schema %}
