@@ -117,8 +117,6 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
   min-height: 80px;
   opacity: 1;
   overflow: hidden;
-  -webkit-transition: all .5s;
-  transition: all .5s;
   opacity: 1;
   transition-property: height, opacity;
 }
