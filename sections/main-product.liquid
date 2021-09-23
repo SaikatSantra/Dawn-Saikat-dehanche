@@ -67,7 +67,7 @@
         </button>
       {%- endif -%}
     </div>
-    <div class="product__info-wrapper grid__item">
+    <div class="product__info-wrapper grid__item" scroll-class="product__info-wrapper"  scroll-trigger=".trigger">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
@@ -120,6 +120,7 @@
               </details>
             </div>
         {%- when 'content_tab' -%}
+        <div class="trigger">
         <div class="tabhead">
           {% for i in (1..4) %}
           {% capture title %}heading_{{i}}{% endcapture %}
@@ -136,6 +137,7 @@
         <div id="content_{{forloop.index}}" class="tabcontent"{% unless forloop.index == 1 %} style="display:none;"{% endunless %}>{{block.settings[content]}}</div>  
         {% endif %}
         {% endfor %}
+        </div>
         
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
