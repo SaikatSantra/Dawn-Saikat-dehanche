@@ -3,8 +3,11 @@
     "main": {
       "type": "sustainability-template",
       "settings": {
-        "image": "shopify:\/\/shop_images\/qr-codes-in-store.jpg",
+        "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
         "adapt_height_first_image": false,
+        "heading": "Image banner",
+        "heading_size": "medium",
+        "text": "Give customers details about the banner image(s) or content on the template.",
         "desktop_text_box_position": "center",
         "show_text_box": true,
         "image_overlay_opacity": 0,
