@@ -526,6 +526,23 @@ function SwitchTab(tab_id, tab_content) {
 	}
 	document.getElementById(tab_id).className = 'tabmenu active';
 }
+  
+  
+  let scrollpos = window.scrollY
+  const header = document.querySelector("product__info-wrapper")
+  const header_height = header.offsetHeight
+
+  const add_class_on_scroll = () => header.classList.add("fade-in")
+  const remove_class_on_scroll = () => header.classList.remove("fade-in")
+
+  window.addEventListener('scroll', function() { 
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+    console.log(scrollpos)
+  })
 </script>
 
 {% schema %}
