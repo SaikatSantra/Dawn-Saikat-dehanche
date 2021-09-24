@@ -533,10 +533,10 @@ function SwitchTab(tab_id, tab_content) {
   $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
 
-    //>=, not <=
     if (scroll >= 500) {
-      //clearHeader, not clearheader - caps H
-      $(".clearHeader").addClass("darkHeader");
+      $(".product__info-container").addClass("hide-product-tab");
+    } else {
+      $(".product__info-container").removeClass("hide-product-tab");
     }
   });
 </script>
