@@ -37,12 +37,12 @@ window.onload=function(){
     event.preventDefault();
     var inputValue = document.getElementById('find_number').value;
     console.log(inputValue);
-
+    searchFunc(inputValue);
   });
 }       
 
-
-fetch("/search/suggest.json?q=12345&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=tag,variants.sku,variants.barcode")
+function searchFunc (inputValue) {
+  fetch("/search/suggest.json?q="+inputValue+"&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=tag,variants.sku,variants.barcode")
   .then((response) => response.json())
   .then((suggestions) => {
     const productSuggestions = suggestions.resources.results.products;
@@ -53,4 +53,5 @@ fetch("/search/suggest.json?q=12345&resources[type]=product&resources[options][u
       console.log(firstProductSuggestion);
     }
   }
-);
+       );
+}
