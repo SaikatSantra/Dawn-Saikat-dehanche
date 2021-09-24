@@ -317,9 +317,11 @@
                         {%- endif -%}
                       {% endif %}
                     </button>
+                     {% unless Vqty <= 0 and Vpolicy == "continue" %}
                     {%- if block.settings.show_dynamic_checkout -%}
                       {{ form | payment_button }}
                     {%- endif -%}
+                    {% endunless %}
                   </div>
                 {%- endform -%}
               </product-form>
