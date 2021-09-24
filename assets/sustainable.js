@@ -1,4 +1,4 @@
-var url = "/admin/api/2021-07/products/7039370428583.json";
+var url = "https://dehanche-3.myshopify.com/admin/products/7039370428583.json";
  fetch(url).then(function(response) {
   return response.json();
 }).then(function(data) {
