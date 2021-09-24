@@ -56,7 +56,8 @@ function searchFunc (inputValue) {
       function tagCheck(item, index) {
         var substring = "hand craft on";
         if (item.includes(substring)){
-          console.log(item); 
+          const tagSplitValue = item.split(":")[1];
+          console.log(tagSplitValue); 
         }
       }
       
