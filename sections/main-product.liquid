@@ -67,8 +67,9 @@
         </button>
       {%- endif -%}
     </div>
-    <div class="product__info-wrapper grid__item" scroll-class="hide-product-tab"  scroll-trigger=".product-tab">
+    <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
+        <div class="info-iiner" scroll-class="hide-product-tab"  scroll-trigger=".product-tab">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -357,6 +358,7 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+      </div>
       </div>
     </div>
   </div>
