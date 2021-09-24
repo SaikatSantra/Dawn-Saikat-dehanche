@@ -12,7 +12,33 @@
 
 
 
-jQuery.getJSON('/products/demo-1-red.js', function(product) {
-  console.log(product);
-} );
+// jQuery.getJSON('/products/demo-1-red.js', function(product) {
+//   console.log(product);
+// } );
 
+
+// {
+//   "q": "bag",
+//   "resources": {
+//     "type": "product",
+//     "options": {
+//       "unavailable_products": "hide",
+//       "fields": "title,product_type,variants.title"
+//     }
+//   }
+// }
+
+fetch("/search/suggest.json?q=12345&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=tag")
+  .then((response) => response.json())
+  .then((suggestions) => {
+    const productSuggestions = suggestions.resources.results.products;
+
+    if (productSuggestions.length > 0) {
+      const firstProductSuggestion = productSuggestions[0];
+
+      alert(`The title of the first product suggestion is: ${
+        firstProductSuggestion.title}`
+      );
+    }
+  }
+);
