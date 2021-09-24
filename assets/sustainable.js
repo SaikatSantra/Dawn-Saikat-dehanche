@@ -28,12 +28,19 @@
 //   }
 // }
 
+const form  = document.getElementById('searchForm_sus');
 
+form.addEventListener('submit', (event) => {
+  // handle the form data
+
+  event.preventDefault();
+  var inputValue = document.getElementById('find_number').value;
+  console.log(inputValue);
+
+});
 
         
-function searchInputValue(inputValue){
-  console.log(inputValue);
-}
+
 
 fetch("/search/suggest.json?q=12345&resources[type]=product&resources[options][unavailable_products]=hide&resources[options][fields]=tag,variants.sku,variants.barcode")
   .then((response) => response.json())
