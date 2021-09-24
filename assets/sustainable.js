@@ -8,3 +8,8 @@ var url = "/products/demo-1-red.js";
 });
 
 
+
+// jQuery.getJSON('/products/demo-1-red.js', function(product) {
+//   alert('The title of this product is ' + product.title);
+// } );
+
