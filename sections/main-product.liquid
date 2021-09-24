@@ -296,7 +296,10 @@
                     {% assign Vpolicy = product.selected_or_first_available_variant.inventory_policy%}
                     {% assign buttonLable = "Pre Order "%}
                     
-                    {{buttonLable}} + Vpolicy-{{Vpolicy}} + Vqty-{{Vqty}}
+                   
+                      {% if Vqty <= 0 and Vpolicy == "continue" %}
+                     <input id="preOrder" type="hidden" name="properties[Pre-order note]" value="Pre order item">
+                      {% endif %}
                     
                     <button
                       type="submit"
