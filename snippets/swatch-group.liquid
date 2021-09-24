@@ -1,5 +1,5 @@
 {% assign groups = product.metafields.my_fields.swatch_group | split:"," %}
-
+{% if groups != blank %}
 {% if template contains 'product' %}
 <div class="product-options product-options--type-page product-options--centered js-product-options swatch-group">
   <div data-section-container>
@@ -31,6 +31,7 @@
     </div>
   </div>
 </div>
+{% endif %}
 {% elsif template contains 'collection' %} 
 {% assign product = product %}
 
