@@ -38,7 +38,6 @@ form.addEventListener('submit', function (event){
   console.log(inputValue);
 
 });
-
         
 
 
