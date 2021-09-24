@@ -13,6 +13,6 @@
 
 
 jQuery.getJSON('/products/demo-1-red.js', function(product) {
-  console.log('The title of this product is ' + product.title);
+  console.log(product);
 } );
 
