@@ -291,17 +291,27 @@
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                   <div class="product-form__buttons">
+                    
+                    {% assign Vqty = product.selected_or_first_available_variant.inventory_quantity %}
+                    {% assign Vpolicy = product.selected_or_first_available_variant.inventory_policy%}
+                    {% assign buttonLable = "Pre Order "%}
+                    
+                    
                     <button
                       type="submit"
                       name="add"
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
+                      {% if Vqty <= 0 and Vpolicy == "continue" %}
+                      {{buttonLable}}
+                      {% else %}
                         {%- if product.selected_or_first_available_variant.available -%}
                           {{ 'products.product.add_to_cart' | t }}
                         {%- else -%}
                           {{ 'products.product.sold_out' | t }}
                         {%- endif -%}
+                      {% endif %}
                     </button>
                     {%- if block.settings.show_dynamic_checkout -%}
                       {{ form | payment_button }}
