@@ -10,7 +10,7 @@
         {% assign pLinkk = gg | split:":" | last | strip %}
         
         {% if pLinkk == product.handle %}
-         <input id="{{colorr}}" type="hidden" name="properties[]" value="{{colorr | capitalize  | replace:"-"," "}}">
+         <input id="{{colorr}}" type="hidden" name="properties[Color]" value="{{colorr | capitalize  | replace:"-"," "}}">
         {{colorr}}
         {% endif %}
         {% endfor %}
