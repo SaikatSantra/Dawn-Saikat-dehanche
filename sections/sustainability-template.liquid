@@ -120,6 +120,9 @@
       <div class="box-inner">
         <p class="box-title">JON, JOE, JON BATCH DAILY!</p>
         <h3>Dolor sit amet ipsum</h3>
+        {% if section.settings.box_image != blank %}
+        <img src="{{ section.settings.box_image | img_url: 'master' }}" />
+        {% endif %}
       </div>
     </li>
     
@@ -257,6 +260,11 @@
       "id": "stack_images_on_mobile",
       "default": true,
       "label": "t:sections.image-banner.settings.stack_images_on_mobile.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_image",
+      "label": "Box image"
     },
     {
       "type": "checkbox",
