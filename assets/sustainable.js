@@ -56,7 +56,7 @@ function searchFunc (inputValue) {
       function tagCheck(item, index) {
         if (item === "hand craft on") {
           console.log(item); 
-          break;
+          return false;
         }
         console.log("item"+item);
       }
