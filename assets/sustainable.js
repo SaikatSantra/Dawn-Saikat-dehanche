@@ -54,7 +54,10 @@ function searchFunc (inputValue) {
       var tags = firstProductSuggestion.tags;
       tags.forEach(tagCheck);
       function tagCheck(item, index) {
-        console.log(item);
+        if (item === "hand craft on" || "craft on") {
+          console.log(item);
+        }
+        
       }
       
     }
