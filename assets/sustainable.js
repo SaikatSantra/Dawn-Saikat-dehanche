@@ -57,7 +57,11 @@ function searchFunc (inputValue) {
         var substring = "hand craft on";
         if (item.includes(substring)){
           const tagSplitValue = item.split(":")[1];
-          console.log(tagSplitValue); 
+          const date = tagSplitValue.split(":")[0]+' '+tagSplitValue.split(":")[1];
+          const year = tagSplitValue.split(":")[3];
+          
+           document.getElementById('date').innerHTML = date;
+          document.getElementById('year').innerHTML = year;
         }
       }
       
