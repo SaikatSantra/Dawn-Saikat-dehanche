@@ -51,7 +51,7 @@ function searchFunc (inputValue) {
       const firstProductSuggestion = productSuggestions[0];
 
       document.getElementById('batchNumber').innerHTML = "Batch number </br>"+inputValue;
-      console.log(firstProductSuggestion);
+      console.log(firstProductSuggestion.tags);
     }
   }
        );
