@@ -50,6 +50,7 @@ function searchFunc (inputValue) {
     if (productSuggestions.length > 0) {
       const firstProductSuggestion = productSuggestions[0];
 
+      document.getElementById('batchNumber').innerHTML = inputValue;
       console.log(firstProductSuggestion);
     }
   }
