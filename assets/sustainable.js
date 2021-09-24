@@ -57,7 +57,7 @@ function searchFunc (inputValue) {
         var substring = "hand craft on";
         if (item.includes(substring)){
           const tagSplitValue = item.split(":")[1];
-          const date = tagSplitValue.split(" ")[0]+' '+tagSplitValue.split(" ")[1];
+          const date = tagSplitValue.split(" ")[0]+' '+tagSplitValue.split(" ")[1] +' '+tagSplitValue.split(" ")[2];
           const year = tagSplitValue.split(" ")[3];
           
            document.getElementById('date').innerHTML = date;
