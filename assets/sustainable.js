@@ -28,9 +28,9 @@
 //   }
 // }
 
-const form  = document.getElementById('searchForm_sus');
+const form = document.getElementById('searchForm_sus');
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', function (event){
   // handle the form data
 
   event.preventDefault();
