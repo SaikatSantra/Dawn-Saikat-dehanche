@@ -135,12 +135,8 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
   
   .product__info-wrapper .product__info-container {
     margin-top: 20vh;
-    top: 0;
+    top: 18vh;
   } 
-  .product__info-wrapper.hide-product-tab .product__info-container {
-    margin-top: 0;
-    top: 20vh;
-  }
 }
 
 
