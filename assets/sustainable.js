@@ -55,7 +55,7 @@ function searchFunc (inputValue) {
       tags.forEach(tagCheck);
       function tagCheck(item, index) {
         var substring = "hand craft on";
-        if (item.includes(substring){
+        if (item.includes(substring)){
           console.log(item); 
         }
       }
