@@ -533,7 +533,7 @@ function SwitchTab(tab_id, tab_content) {
   $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 500) {
+    if (scroll >= 200) {
       $(".product__info-container").addClass("hide-product-tab");
     } else {
       $(".product__info-container").removeClass("hide-product-tab");
