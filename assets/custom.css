@@ -142,6 +142,7 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
 #searchForm_sus {width: 100%;}
 .box-inner {
   border: solid 1px #ddd;
+  height: 100%;
   padding: 20px;
   text-align: center;
 }
