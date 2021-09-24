@@ -137,9 +137,9 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
   .product__info-container {position: relative;}
   .info-inner {
     display: block;
-    position: absolute;
+    /*position: absolute;
     width: 100%;
-    top: 15vh;
+    top: 15vh;*/
   }
 }
 
