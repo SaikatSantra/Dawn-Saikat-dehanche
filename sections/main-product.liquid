@@ -547,7 +547,7 @@ function SwitchTab(tab_id, tab_content) {
   window.addEventListener("scroll", function() {
     elements.forEach(function(scroll) {
       var bounds = scroll.area.getBoundingClientRect();
-      if (bounds.top < window.innerHeight * .2) {
+      if (bounds.top < window.innerHeight * .3) {
         scroll.target.classList.add(scroll.className);
       } else {
         scroll.target.classList.remove(scroll.className);
