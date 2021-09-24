@@ -36,9 +36,7 @@ fetch("/search/suggest.json?q=12345&resources[type]=product&resources[options][u
     if (productSuggestions.length > 0) {
       const firstProductSuggestion = productSuggestions[0];
 
-      alert(`The title of the first product suggestion is: ${
-        firstProductSuggestion.title}`
-      );
+      console.log(firstProductSuggestion);
     }
   }
 );
