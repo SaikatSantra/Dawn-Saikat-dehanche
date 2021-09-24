@@ -121,12 +121,10 @@ slider-component.slider-mobile-gutter {margin: -1px 0 0 -1px;}
     opacity: 1;
     transition-property: height, opacity;
   }
-  .product-tab {min-height: 80px;}
   .hide-product-tab .product-tab,
   .hide-product-tab .product-options {
     height: 0;
     opacity: 0;
-    min-height: 0px;
   }
   .product__info-wrapper,
   .product__info-container>*+* {
