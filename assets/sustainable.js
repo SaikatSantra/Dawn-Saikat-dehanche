@@ -57,7 +57,7 @@ function searchFunc (inputValue) {
         if (item === "hand craft on" || "craft on") {
           console.log(item);
         }
-        
+        console.log("item"+item);
       }
       
     }
