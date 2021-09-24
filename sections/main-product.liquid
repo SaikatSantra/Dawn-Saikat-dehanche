@@ -556,6 +556,18 @@ function SwitchTab(tab_id, tab_content) {
   });
 </script>
 
+<script>
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    //>=, not <=
+    if (scroll >= 500) {
+      //clearHeader, not clearheader - caps H
+      $(".clearHeader").addClass("darkHeader");
+    }
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
