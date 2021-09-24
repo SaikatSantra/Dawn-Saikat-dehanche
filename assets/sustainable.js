@@ -31,7 +31,7 @@
 
 
         
-function searchInputValue{inputValue}{
+function searchInputValue(inputValue){
   console.log(inputValue);
 }
 
