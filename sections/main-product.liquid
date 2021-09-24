@@ -296,6 +296,7 @@
                     {% assign Vpolicy = product.selected_or_first_available_variant.inventory_policy%}
                     {% assign buttonLable = "Pre Order "%}
                     
+                    {{buttonLable}} + Vpolicy-{{Vpolicy}} + Vqty-{{Vqty}}
                     
                     <button
                       type="submit"
