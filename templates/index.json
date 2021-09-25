@@ -5,6 +5,7 @@
       "blocks": {
         "1631860093bb3d171f-0": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "medium"
@@ -12,12 +13,14 @@
         },
         "1631860093bb3d171f-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template."
           }
         },
         "1631860093bb3d171f-2": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
@@ -34,7 +37,7 @@
         "1631860093bb3d171f-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/1_jpg.png",
+        "image": "shopify:\/\/shop_images\/Untitled-2.jpg",
         "desktop_text_box_position": "flex-end",
         "show_text_box": false,
         "image_overlay_opacity": 0,
@@ -49,6 +52,7 @@
       "blocks": {
         "1631719814361caad5-0": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "medium"
@@ -56,12 +60,14 @@
         },
         "1631719814361caad5-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template."
           }
         },
         "1631719814361caad5-2": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
@@ -78,8 +84,8 @@
         "1631719814361caad5-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/1for-2_jpg.png",
-        "image_2": "shopify:\/\/shop_images\/for-2.jpg",
+        "image": "shopify:\/\/shop_images\/Untitled-3.jpg",
+        "image_2": "shopify:\/\/shop_images\/Untitled-4.jpg",
         "desktop_text_box_position": "center",
         "show_text_box": false,
         "image_overlay_opacity": 0,
@@ -123,9 +129,9 @@
         "c2dc2d9b-09f6-4acb-aeaf-32e49fde9861"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitlead-3.png",
-        "image_2": "shopify:\/\/shop_images\/Untitled-a3.png",
-        "image_3": "shopify:\/\/shop_images\/Untitled-3.png",
+        "image": "shopify:\/\/shop_images\/Untitled-12.jpg",
+        "image_2": "shopify:\/\/shop_images\/Untitled-11.jpg",
+        "image_3": "shopify:\/\/shop_images\/Untitled-13.jpg",
         "desktop_text_box_position": "center",
         "show_text_box": false,
         "image_overlay_opacity": 0,
@@ -141,33 +147,33 @@
         "1631895513c3c50f2a-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "image": "shopify:\/\/shop_images\/Untitled-12.jpg",
+            "title": "",
+            "text": ""
           }
         },
         "1631895513c3c50f2a-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "image": "shopify:\/\/shop_images\/Untitled-13.jpg",
+            "title": "",
+            "text": ""
           }
         },
         "1631895513c3c50f2a-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "image": "shopify:\/\/shop_images\/Untitled-11.jpg",
+            "title": "",
+            "text": ""
           }
         },
         "83285903-02ee-4f8f-8e14-40d2f0f29d7a": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-murat-esibatir-4355609_fdce4a44-f86f-421b-8153-09c3e9098345.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "image": "shopify:\/\/shop_images\/Untitled-12.jpg",
+            "title": "",
+            "text": ""
           }
         }
       },
