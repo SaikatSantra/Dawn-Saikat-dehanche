@@ -100,6 +100,7 @@
       "blocks": {
         "f61ae544-7388-4d07-82ff-ccad43beb056": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "medium"
@@ -107,12 +108,14 @@
         },
         "ed14f502-a58e-4817-ab42-e30408322759": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template."
           }
         },
         "c2dc2d9b-09f6-4acb-aeaf-32e49fde9861": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Button label",
             "button_link_1": "",
