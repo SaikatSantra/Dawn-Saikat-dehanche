@@ -99,6 +99,13 @@
           "color_scheme": "accent-2",
           "full_width": true
         }
+      },
+      "sticky-newsletter": {
+        "type": "sticky-newsletter",
+        "settings": {
+          "color_scheme": "accent-2",
+          "full_width": true
+        }
       }
     },
     "content_for_index": [
