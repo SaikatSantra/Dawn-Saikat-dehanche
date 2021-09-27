@@ -2,7 +2,7 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 <div class="newsletter center{% if section.settings.full_width == false %} newsletter--narrow page-width{% endif%}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient"
+  <div class="newsletter__wrapper{% if section.settings.image == blank %} color-{{ section.settings.color_scheme }} gradient{% endif %}"
        {% if section.settings.image != blank %}style="background-image:url({{ section.settings.image | img_url: '2048x' }});"{% endif %}>
     {%- for block in section.blocks -%}
       {%- case block.type -%}
