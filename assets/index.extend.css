@@ -42,7 +42,7 @@ span.caption-large.light {
 
 /* newsletter */
 
-.newsletter__wrapper {
+.sticky-newsletter .newsletter__wrapper {
     background-image: url(https://cdn.shopify.com/s/files/1/0585/5251/6775/files/news.png?v=1632200363);
     background-repeat: no-repeat;
     background-size: 517px;
