@@ -102,6 +102,30 @@
       },
       "sticky-newsletter": {
         "type": "sticky-newsletter",
+        "blocks": {
+          "080a81d2-bd68-4fe5-af34-6ecf04699d9c": {
+            "type": "heading",
+            "settings": {
+              "heading": "Subscribe to our emails"
+            }
+          },
+          "3aa2b1a3-af30-49bb-9518-836ae7206a6f": {
+            "type": "paragraph",
+            "settings": {
+              "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            }
+          },
+          "b21232c8-8968-4a18-ae1f-7843e70b4844": {
+            "type": "email_form",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "080a81d2-bd68-4fe5-af34-6ecf04699d9c",
+          "3aa2b1a3-af30-49bb-9518-836ae7206a6f",
+          "b21232c8-8968-4a18-ae1f-7843e70b4844"
+        ],
         "settings": {
           "color_scheme": "accent-2",
           "full_width": true
