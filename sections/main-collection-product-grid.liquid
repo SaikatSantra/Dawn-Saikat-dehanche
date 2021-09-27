@@ -336,7 +336,7 @@
                                  {% if value.count == 0 and value.active == false %}disabled{% endif %}
                                  >
 
-                          <span class="mobile-facets__highlight"
+                          <span class="mobile-facets__highlight{% if filter.label == "Color" %} bg-highlight{% endif %}"
                                 {% if filter.label == "Color" %} style="{% if image contains image_name %}background-image: url({{ image | img_url:'35x' }});{% endif %} background-color:{{ value.label | escape | handleize }};" {% endif %} 
                                 ></span>
 
