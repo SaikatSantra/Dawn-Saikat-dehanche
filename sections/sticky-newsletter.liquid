@@ -1,0 +1,317 @@
+{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+{{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .newsletter_section:not(.active_sticky) .close_button{
+  display:none;
+  }
+  .newsletter_section.active_sticky .close_button{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 30px;
+    top: 20px;
+    z-index: 1;
+    transform: rotate(45deg);
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+ .newsletter_section.active_sticky .close_button:before {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+}
+ .newsletter_section.active_sticky .close_button:after {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+    transform: rotate(90deg);
+}
+  .newsletter_section{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-sizing: border-box;
+    bottom: 0;
+    z-index: 9;
+  }
+  .mini_newsletter h4 {
+    margin: 0!important;
+}
+  
+  .mini_newsletter {
+    padding: 20px 0;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s 0.2s opacity, visibility ease-in-out !important;
+    display: block;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 10%);
+  }
+  .active_sticky  .mini_newsletter {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .newsletter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #e5eef2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    transform: translate3d(0, 100%, 0);
+    transition: 0.4s transform ease-in-out !important;
+        z-index: 2;
+  }
+ .open .newsletter {
+    transform: translate3d(0, 0, 0);
+}
+  
+  .plusIcon{  
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+        z-index: 1;
+  }
+  .plusIcon:before {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 0.2s ease-in-out;
+  }
+  .plusIcon:after {
+    top: 50%;
+    margin-top: -1px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 16px;
+    background: #2e3033;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 0.2s ease-in-out;
+    transform: rotate(
+      90deg);
+  }
+  
+</style>
+<script>
+function removeClass(el, className) {
+    var el = document.querySelectorAll(el);
+    
+    for (i = 0; i < el.length; i++) {
+
+      if (el[i].classList) {
+        el[i].classList.remove(className);
+      } else {
+        el[i].className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      }
+    }
+}
+  function addClass(el, className) {
+    var el = document.querySelectorAll(el);
+    
+    for (i = 0; i < el.length; i++) {
+
+      if (el[i].classList) {
+        el[i].classList.add(className);
+      } else {
+        el[i].className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      }
+    }
+}
+</script>
+
+<div class="newsletter center{% if section.settings.full_width == false %} newsletter--narrow page-width{% endif%}">
+  <a class="close_button" onclick="removeClass('.newsletter_section', 'open')"> 
+  </a>
+  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          {% render block %}
+        {%- when 'heading' -%}
+          <h2 class="h1" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+        {%- when 'paragraph' -%}
+          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+        {%- when 'email_form' -%}
+          <div {{ block.shopify_attributes }}>
+            {% form 'customer', class: 'newsletter-form' %}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="field__input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="Newsletter-error--{{ section.id }}"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="Newsletter-success--{{ section.id }}"
+                    {% endif %}
+                    placeholder="{{ 'newsletter.label' | t }}"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{ 'newsletter.label' | t }}
+                  </label>
+                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                    {% render 'icon-arrow' %}
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              {%- endif -%}
+            {% endform %}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+
+</div>
+  <div onclick="addClass('.newsletter_section', 'open')" class="mini_newsletter center gradient color-{{ section.settings.color_scheme }}"><h4>Claim your exclusive discount</h4><span class="plusIcon"></span></div>
+
+
+{% schema %}
+{
+  "name": "t:sections.newsletter.name",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width newsletter_section active_sticky open",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.newsletter.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.newsletter.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.newsletter.settings.color_scheme.options__3.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.newsletter.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.newsletter.settings.color_scheme.options__5.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.newsletter.settings.color_scheme.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.newsletter.settings.full_width.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.paragraph.content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.newsletter.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Subscribe to our emails",
+          "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "t:sections.newsletter.blocks.paragraph.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
+          "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        }
+      ]
+    },
+    {
+      "type": "email_form",
+      "name": "t:sections.newsletter.blocks.email_form.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.newsletter.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "email_form"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
