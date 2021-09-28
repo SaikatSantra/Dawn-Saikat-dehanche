@@ -87,6 +87,9 @@
   left: 25px;
   top: 15px;
 }
+.mobile-facets__label>input[type=checkbox]:checked~.icon-checkmark {
+  z-index: 4;
+}
 /*.mobile-facets__label .icon-checkmark {left: 48px !important;}*/
 
 
