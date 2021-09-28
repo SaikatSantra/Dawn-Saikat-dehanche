@@ -3,7 +3,16 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
+<style>
 
+  label.mobile-facets__label.color-label svg path {
+    stroke: #fff;
+}
+label.mobile-facets__label.color-label svg {
+    background: transparent;
+}
+  
+</style>
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
@@ -330,8 +339,8 @@
 
                         <label 
                                valueData="{{value.label | escape }}" 
-                               for="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}" class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}">
-                          <input class="mobile-facets__checkbox" type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}"
+                               for="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}" class="{% if filter.label == "Color" %} color-label {% endif %} mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}">
+                          <input class="mobile-facets__checkbox " type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-mobile-{{ forloop.index }}"
                                  {% if value.active %}checked{% endif %}
                                  {% if value.count == 0 and value.active == false %}disabled{% endif %}
                                  >
