@@ -5,7 +5,7 @@
 2. Banner from top under Header.<br>
 3. Color swatch function using product group. (Visible in collection and product page ) <br>
 4. Modified collection title, price and short description.<br>
-5. Search Product details using product batch number,sku number and tag. (Visible : <a href="www.dehanche.com/pages/sustainability">Sustainability</a>)<br>
+5. Search Product details using product batch number,sku number and tag. (Visible : <a href="https://dehanche.com/pages/sustainability">Sustainability</a>)<br>
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
